@@ -1,0 +1,116 @@
+var CTVPay = {
+	env: null,
+	ProductID: null,
+	RedirectURI: null,
+	bshun: null, // TK: Matteo - CTBT-2031
+	camp: null,
+	OneClickPayment: false,
+
+	Init: function () {
+		var script = document.currentScript;
+		var src = script.src;
+		CTVPay.env = src.substring(0, src.indexOf(".tv/")) + ".tv";
+		CTVPay.ProductID = script.getAttribute("data-product");
+		CTVPay.RedirectURI = script.getAttribute("data-redirect-url");
+		function getUrlParameter(param) {
+			param = param.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+			var regex = new RegExp('[\\?&]' + param + '=([^&#]*)');
+			var results = regex.exec(location.search);
+			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		}
+		CTVPay.bshun = getUrlParameter("bshun"); // TK: Matteo - CTBT-2031
+		CTVPay.camp = getUrlParameter("camp");
+	},
+
+	//MARCOF add errorRedirectURI parameter to redirect the CTVPay in case of error
+	Pay: function (ProductID, sRedirectURI = CTVPay.RedirectURI, fnSuccessCallback, fnErrorCallback, UserData, sAlreadyIncludedRedirectURI, errorRedirectURI) {
+		var w = 530;
+		var h = 550;
+		var left = (screen.width / 2) - (w / 2);
+		var top = (screen.height / 2) - (h / 2);
+
+		if (/^https?:\/\//i.test(sRedirectURI) == false)
+			if (!sRedirectURI)
+				sRedirectURI = "";
+			else sRedirectURI = location.origin + (sRedirectURI.startsWith("/") ? sRedirectURI : "/" + sRedirectURI);
+
+		var UserParams = "";
+		if (typeof UserData === "object") {
+			for (var UserProp in UserData) {
+				UserParams += "&" + UserProp + "=" + encodeURIComponent(UserData[UserProp]);
+			}
+		}
+
+		if (!errorRedirectURI)
+			errorRedirectURI = "";
+
+		var PayWindow = window.open(CTVPay.env + "/ExternalPurchase.html?ProductID=" + ProductID + "&bshun=" + CTVPay.bshun + "&camp=" + CTVPay.camp + "&RedirectURI=" + encodeURIComponent(sRedirectURI) + "&ErrorRedirectURI=" + encodeURIComponent(errorRedirectURI) + UserParams + "&OneClickPayment=" + CTVPay.OneClickPayment, "_blank", "width=" + w + ",height=" + h + ",top=" + top + ",left=" + left + ",toolbar=no, location=no, directories=no, status=no, menubar=no"); // TK: Matteo - CTBT-2031
+
+		var pay_window_monitor;
+
+		function PayWindowMonitor() {
+			if (PayWindow && PayWindow.closed) {
+				window.clearInterval(pay_window_monitor);
+				window.removeEventListener('message', fnMessageListener, false);
+				return false;
+			}
+		}
+
+		pay_window_monitor = window.setInterval(PayWindowMonitor, 300);
+
+		function fnMessageListener({ data: evtData }) {
+			if (typeof evtData !== "object" || evtData.Action != "close" && evtData.OrderId && evtData.OrderId.startsWith("UID_") == false)
+				return;
+
+			if (CTVPay.env == window.origin)
+				PayWindow.onbeforeunload = null;
+			PayWindow.close();
+
+			if (evtData.PurchaseSuccess) {
+				if (typeof (fnSuccessCallback) === "function")
+					fnSuccessCallback(evtData.oCallbackParams);
+				if (sRedirectURI && sRedirectURI.trim()) {
+					var connector = sRedirectURI.indexOf("?") != -1 ? "&" : "?";
+					if (evtData.OrderId && evtData.OrderId.startsWith("UID_"))
+						location.href = sRedirectURI + connector + "UID=" + evtData.OrderId.replace("UID_", "");
+				}
+			} else if (typeof (fnErrorCallback) === "function")
+				fnErrorCallback(evtData.oCallbackParams);
+
+			if (evtData.ErrorTxtCode && evtData.ErrorTxtCode == "ALREADY_INCLUDED" && sAlreadyIncludedRedirectURI)
+				location.href = sAlreadyIncludedRedirectURI;
+		}
+
+		window.addEventListener('message', fnMessageListener, false);
+	},
+
+	OneClickPay: function (ProductID, fnSuccessCallback, fnErrorCallback) {
+		var OCPFrameWrapper = document.createElement("div");
+		OCPFrameWrapper.setAttribute("style", "position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.5);");
+		var OCPFrame = document.createElement("iframe");
+		OCPFrame.setAttribute("src", CTVPay.env + "/OneClickPay?ProductID=" + ProductID);
+		OCPFrame.setAttribute("style", "width: 100%; height: 100%;");
+		OCPFrame.setAttribute("frameborder", "0");
+		OCPFrame.setAttribute("scrolling", "auto");
+		OCPFrameWrapper.appendChild(OCPFrame);
+		document.body.appendChild(OCPFrameWrapper);
+
+		window.addEventListener("message", fnOnMessage, false);
+
+		function fnOnMessage(event) {
+			if (event.origin != CTVPay.env)
+				return;
+			if (event.data.status == "ERROR") {
+				OCPFrameWrapper.remove();
+				window.removeEventListener("message", fnOnMessage);
+				fnErrorCallback();
+			}
+			if (event.data.status == "SUCCESS") {
+				OCPFrameWrapper.remove();
+				window.removeEventListener("message", fnOnMessage);
+				fnSuccessCallback();
+			}
+		}
+	}
+};
+CTVPay.Init();
