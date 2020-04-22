@@ -50,10 +50,22 @@ function nextPrev(n) {
 	var prodotto;
 	var selezionato = document.getElementById("offerta").checked;
 	if(selezionato) {
-		prodotto = "ONE_CLICK_1"
-		} else {
-		prodotto = "ONE_CLICK_2"
-		}
+        switch(nazfr) {
+          case "ITA":
+            prodotto = "BUMP"
+            break;
+          default:
+            prodotto = "BUMP_NO_ITA"
+        }
+    } else {
+        switch(nazfr) {
+          case "ITA":
+            prodotto = "BOOK_FUNNEL"
+            break;
+          default:
+            prodotto = "BOOK_FUNNEL_NO_ITA"
+        }
+    }
 
 	//alert(prodotto);
 
