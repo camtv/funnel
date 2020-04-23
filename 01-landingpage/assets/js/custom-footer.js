@@ -69,7 +69,7 @@ function nextPrev(n) {
 
 	//alert(prodotto);
 
-	CTVPay.Pay(prodotto, null, null, null, {
+	CTVPay.Pay(prodotto, "https://camtv.github.io/funnel/02-oto1/index.html", null, null, {
 				"FirstName": nomefr, // obbligatorio
 				"LastName": " ", // obbligatorio
 				"EMail": emailfr, // obbligatorio
