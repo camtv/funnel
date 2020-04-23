@@ -35,8 +35,9 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-	///////////////////////////////////////////////////////////////////////////////////////////// CHIAMATA API CAM.TV
-	document.getElementById("regForm").submit();
+  ///////////////////////////////////////////////////////////////////////////////////////////// CHIAMATA API CAM.TV
+  // *** rimosso submit del form per evitare ricaricamento della pagina ***
+	// document.getElementById("regForm").submit();
 
 	var nomefr = document.getElementById("name").value;
 	var emailfr = document.getElementById("email").value;
