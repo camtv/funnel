@@ -5,11 +5,11 @@ function appari() {
 }
 
 function step() {
-	CTVPay.OneClickPay("ONE_CLICK_4", null, null);
+	CTVPay.OneClickPay("ONE_CLICK_4", proceed, null);
 }
 
 function finisci() {
-	window.location.href = "http://www.google.com";
+	window.location.href = "https://internetcreaindipendenza.it/thank-you";
 	}
 	
 CTVPay.OneClickPayment = true;	
