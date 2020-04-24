@@ -33,3 +33,10 @@ player.setCurrentTime(0).then(function(seconds) {
 var element = document.getElementById("btn-overlay");
 element.classList.add("cela");
 }	
+
+
+// redirigi a thank-you page finale
+
+function proceed() {
+	window.location.href = 'https://internetcreaindipendenza.it/thank-you';
+}
