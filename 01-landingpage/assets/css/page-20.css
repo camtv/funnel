@@ -659,13 +659,13 @@ img {
         min-width: .5em
     }
 
-@font-face {
+/*@font-face {
     font-family: op3-icons;
     src: url(../fonts/op3-icons.eot?ver=1.7.0);
     src: url(../fonts/op3-icons.eot?ver=1.7.0) format("embedded-opentype"),url(../fonts/op3-icons.woff2?ver=1.7.0) format("woff2"),url(../fonts/op3-icons.woff?ver=1.7.0) format("woff"),url(../fonts/op3-icons.ttf?ver=1.7.0) format("truetype"),url(../fonts/op3-icons.svg?ver=1.7.0) format("svg");
     font-weight: 400;
     font-style: normal
-}
+}*/
 
 .op3-icon {
     display: inline-block;
@@ -9338,4 +9338,9 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
             background-size: cover;
             background-position: center top;
         }
+}
+
+
+img.shadowed {
+    box-shadow: 4px 4px 6px #00000080 !important;
 }
