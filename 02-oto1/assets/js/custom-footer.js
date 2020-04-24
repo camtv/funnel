@@ -35,13 +35,19 @@ element.classList.add("cela");
 }	
 
 
-
 // imposta link per step 3 (oto-2)
 
 function redirigi() {
 	var link = document.getElementById("nothx");
-	link.setAttribute("href", "http://www.google.it");
+	link.setAttribute("href", "https://camtv.github.io/funnel/03-oto2/index.html");
 	return false;
 }
 
 redirigi();
+
+
+// redirigi a oto-2 in caso di successo del pagamento
+
+function proceed() {
+	window.location.href = 'https://camtv.github.io/funnel/03-oto2/index.html';
+}
