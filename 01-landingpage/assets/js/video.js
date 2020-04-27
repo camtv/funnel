@@ -7,8 +7,9 @@ $(document).ready(function() {
     player = new Player("video_vimeo");
 });
 
-function VideoRestart() {
+function VideoRestart(dom_el) {
 
+    $(dom_el).hide();
     player.setCurrentTime(0).then(function (seconds) {
         // `seconds` indicates the actual time that the player seeks to
     }).catch(function (error) {
