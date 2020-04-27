@@ -39,7 +39,7 @@ element.classList.add("cela");
 
 function redirigi() {
 	var link = document.getElementById("nothx");
-	link.setAttribute("href", "https://camtv.github.io/funnel/03-oto2/index.html");
+	link.setAttribute("href", "https://internetcreaindipendenza.it/funnel/03-oto2/index.html");
 	return false;
 }
 
@@ -49,5 +49,5 @@ redirigi();
 // redirigi a oto-2 in caso di successo del pagamento
 
 function proceed() {
-	window.location.href = 'https://camtv.github.io/funnel/03-oto2/index.html';
+	window.location.href = 'https://internetcreaindipendenza.it/funnel/03-oto2/index.html';
 }
