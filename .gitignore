@@ -1,3 +1,7 @@
 /.idea/
 *.DS_Store
 /01-landingpage/.idea/
+/02-oto1/dist/
+/03-oto2/dist/
+/03-oto2/.cache/
+/02-oto1/.cache/

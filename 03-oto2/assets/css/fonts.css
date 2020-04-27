@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 100;
   src: local('Barlow Condensed Thin'), local('BarlowCondensed-Thin'),
-       url('../../fonte/barlow-condensed-v4-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/barlow-condensed-v4-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
        url('../../fonts/barlow-condensed-v4-latin-100.woff') format('woff'); /* Modern Browsers */
 }
 /* barlow-condensed-200 - latin */

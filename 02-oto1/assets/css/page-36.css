@@ -773,6 +773,7 @@ img {
     }
 }
 
+/*
 @font-face {
     font-family: op3-icons;
     src: url(../fonts/op3-icons.eot?ver=1.7.0);
@@ -780,7 +781,7 @@ img {
     font-weight: 400;
     font-style: normal
 }
-
+*/
 .op3-icon {
     display: inline-block;
     font: normal normal normal 1em/1 op3-icons;
