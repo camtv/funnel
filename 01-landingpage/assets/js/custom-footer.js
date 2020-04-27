@@ -222,4 +222,3 @@ window.fixStepIndicator = fixStepIndicator;
 window.fixStepIndicator = fixStepIndicator;
 window.tot = tot;
 
-showTab(currentTab); // Display the current tab
