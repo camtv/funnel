@@ -1,8 +1,6 @@
 /***************************************************** gestione form *********************/
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
@@ -156,10 +154,6 @@ function tot() {
 }
 
 
-/******************************************** player vimeo ********************/
-
-var iframe = document.querySelector('iframe');
-var player = new Vimeo.Player(iframe);
 
 function restart() {
 
@@ -217,4 +211,14 @@ function dataMese() {
   document.getElementById("mese").innerHTML = n;
 }
 
-window.onload=dataMese();
+
+
+window.dataMese=dataMese;
+
+window.showTab = showTab;
+window.nextPrev = nextPrev;
+window.validateForm = validateForm;
+window.fixStepIndicator = fixStepIndicator;
+window.tot = tot;
+
+showTab(currentTab); // Display the current tab

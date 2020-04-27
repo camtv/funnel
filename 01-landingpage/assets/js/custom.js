@@ -1,4 +1,6 @@
-CTVPay.OneClickPayment = true;	
+import $ from "jquery"
+
+CTVPay.OneClickPayment = true;
 
 	
 // chiamata adleads NUOVA CON TIMEOUT	
@@ -78,4 +80,6 @@ function chiamaInvia() {
 }
 	  
    
-}  
+}
+
+window.callAdLead = callAdLead;
