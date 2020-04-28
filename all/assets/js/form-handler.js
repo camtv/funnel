@@ -1,4 +1,6 @@
 import Sets from "./conf.js"
+import $ from 'jquery';
+import SendEvent from './error-events'
 
 /***************************************************** gestione form *********************/
 
@@ -24,16 +26,18 @@ function showTab(n) {
 
 function nextPrev(n) {
     // This function will figure out which tab to display
-    var x = document.getElementsByClassName("tab");
+
+    var tabs = $(".tab")
+
     // Exit the function if any field in the current tab is invalid:
     if (n == 1 && !validateForm()) return false;
     // Hide the current tab:
-    x[currentTab].style.display = "none";
-    // Increase or decrease the current tab by 1:
+
+    var prevTab = currentTab;
     currentTab = currentTab + n;
 
     // if you have reached the end of the form... :
-    if (currentTab >= x.length) {
+    if (currentTab >= tabs.length) {
         //...the form gets submitted:
         ///////////////////////////////////////////////////////////////////////////////////////////// CHIAMATA API CAM.TV
         // *** IMPORTANTE: rimosso submit del form per evitare ricaricamento della pagina ***
@@ -68,22 +72,47 @@ function nextPrev(n) {
             }
         }
 
+        var PaymentUserData = {
+            "FirstName": nomefr, // obbligatorio
+            "LastName": " ", // obbligatorio
+            "EMail": emailfr, // obbligatorio
+            "CountryISOCode": nazfr, // obbligatorio es: "ITA"
+            "Address": addressfr,
+            "City": cittafr,
+            "Zip": capfr,
+            "MobileNumber": telfr
+        }
+
+        // Salva i dati di pagnamento per poi gestirli in caso di errore
+        try {
+            window.localStorage.setItem("PaymentUserData",JSON.stringify(PaymentUserData));
+        }
+        catch (e) {
+            console.error(e);
+        }
+
+        var fnOnPayEnd = function(){
+            $(".payment-overlay").addClass("hidden");
+
+        };
+
+        var fnOnPayError = function(){
+            $(".payment-overlay").addClass("hidden");
+            PaymentUserData.EventType = "ERROR";
+            SendEvent(PaymentUserData);
+        };
+
+        $(".payment-overlay").removeClass("hidden");
+        $(".payment-overlay i").off().click(fnOnPayEnd);
+
         CTVPay.OneClickPayment = true;
-        CTVPay.Pay(prodotto, Sets.OTO1, null, null, {
-                "FirstName": nomefr, // obbligatorio
-                "LastName": " ", // obbligatorio
-                "EMail": emailfr, // obbligatorio
-                "CountryISOCode": nazfr, // obbligatorio es: "ITA"
-                "Address": addressfr,
-                "City": cittafr,
-                "Zip": capfr,
-                "MobileNumber": telfr
-            }
-        );
+        CTVPay.Pay(prodotto, Sets.OTO1, fnOnPayEnd, fnOnPayError, PaymentUserData);
 
         ///////////////////////////////////////////////////////////////////////////////////////////// FINE CHIAMATA
         return false;
     }
+    else
+        $(tabs[prevTab]).css("display","none");
 
 ///////////////////////////////////////////////////////////////////////////////////////////// CHIAMATA ADLEAD
 
@@ -95,7 +124,8 @@ function nextPrev(n) {
     var nome = res[0];
     var cognome = res[1];
 
-    callAdLead(emailfr, nome, cognome);
+    if (n >= 0)
+        callAdLead(emailfr, nome, cognome);
     //alert("passo");
 
     // Otherwise, display the correct tab:
@@ -105,8 +135,8 @@ function nextPrev(n) {
 function validateForm() {
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
-    x = document.getElementsByClassName("tab");
-    y = x[currentTab].getElementsByTagName("input");
+    x = $(".tab0");//document.getElementsByClassName("tab");
+    y = x[0].getElementsByTagName("input");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -131,7 +161,9 @@ function validateForm() {
 
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
-        document.getElementsByClassName("step")[currentTab].className += " finish";
+        var el = document.getElementsByClassName("step")[currentTab];
+        if (el != null)
+            el.className += " finish";
     }
     return valid; // return the valid status
 }

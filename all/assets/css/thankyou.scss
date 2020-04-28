@@ -1,0 +1,281 @@
+@import "/assets/css/pure-min.css";
+@import "/assets/css/grids-responsive-min.css";
+
+body {
+	background-color: #f9f9f9;
+}
+
+.pure-g {
+	letter-spacing: 0;
+}
+
+div.header {
+	width: 100%;
+	background:  url('/assets/img/gabri_backg.jpg'), radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.95));
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	padding: 2rem 0 4rem 0 ;
+	margin-bottom: 3rem;
+
+	img {
+		width: 12rem;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 4rem;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 1.9rem;
+		font-family: "Istok Web", sans-serif;;
+		font-weight: 700;
+		margin: 0 auto;
+		line-height: 2.4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 1.1rem;
+		font-family: "Istok Web", sans-serif;;
+		font-weight: 500;
+		margin: 0 auto;
+	}
+
+
+}
+
+div.content {
+
+	.cell {
+		background-color: white;
+		max-width: 90%;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #CCC;
+		padding: 1rem;
+		box-sizing: border-box;
+		text-align: center;
+		border-radius: 0.5rem;
+		margin-bottom: 2rem;
+
+		i {
+			display: block;
+			margin: 0 auto;
+			font-size: 4rem;
+			padding: 1rem;
+		}
+
+		h3 {
+			font-family: "Istok Web", sans-serif;
+			font-weight: 700;
+			margin: 0 auto;
+			margin-bottom: 0.5rem;
+			em {
+				font-style: normal;
+
+			}
+		}
+
+		hr {
+			border: 0.005rem solid rgb(250, 202, 188);
+			width: 2rem;
+			margin: 0 auto;
+		}
+
+		p {
+			font-weight: 400;
+			font-family: "Istok Web", sans-serif;
+			font-size: 0.9rem;
+			b {
+				font-weight: 700;
+			}
+		}
+
+		&.orange h3 em, &.orange i {
+			color: rgb(250, 108, 1)
+		}
+		&.green h3 em, &.green i {
+			color: rgb(15, 225, 169)
+		}
+		&.blue h3 em, &.blue i {
+			color: rgb(0, 118, 218)
+		}
+	}
+
+	a.community {
+		width: 90%;
+		margin: 0 auto;
+		background: rgb(0, 118, 218);
+		background-image:linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+		background-image:linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+		color: white;
+		font-family: lato;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 1.5rem;
+		text-align: center;
+		display: table;
+		margin-top: 2.5rem;
+		margin-bottom: 3rem;
+		text-decoration: none;
+		border-radius: 0.2rem;
+		max-width: 38rem;
+
+		span {
+			display: table-cell;
+			padding: 1rem 0.5rem;
+			line-height: 2rem;
+			.small {
+				font-size: 1.2rem;
+				text-transform: capitalize;
+				font-weight: 300;
+			}
+		}
+
+		i {
+			padding: 1rem 0.5rem;
+			display: table-cell;
+			vertical-align: middle;
+			padding: 1rem;
+			box-sizing: border-box;
+			font-size: 3rem;
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	}
+
+	.socials {
+		text-align: center;
+		margin-bottom: 3rem;
+
+		a {
+
+			display: inline;
+			background-color: transparent;
+			i {
+				font-size: 2.5rem;
+				margin: 0 1rem;
+				background-color: transparent;
+
+				&.fa-youtube {
+					color: rgb(220, 12, 0);
+				}
+
+				&.fa-facebook {
+					color: rgb(59, 89, 152);
+				}
+			}
+		}
+	}
+
+	.copy {
+		color:#898989;
+		text-align: center;
+		font-size: 0.8rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media all and (min-width: 768px) {
+
+	div.header {
+		h1 {
+			font-size: 3rem;
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
+
+	div.content {
+
+		.cell {
+			i {
+				margin-bottom: 1.5rem;
+			}
+
+			h3 {
+				font-size: 1.5rem;
+			}
+			p {
+				font-size: 1rem;
+				padding: 0 2rem;
+			}
+		}
+
+		a.community {
+			span {
+				font-size: 1.8rem;
+				padding-top: 1.5rem;
+				padding-bottom: 1.5rem;
+				line-height: 2.5rem;
+
+				div.small {
+					font-size: 1.5rem;
+				}
+			}
+
+
+		}
+	}
+}
+
+@media all and (min-width: 1024px) {
+
+	div.header {
+		padding-bottom: 5rem;
+		h1 {
+			font-size: 4rem;
+			line-height: 6rem;
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
+
+	div.content {
+		max-width: 95%;
+		margin: 0 auto;
+		div.cell {
+			min-height: 22rem;
+
+			p {
+				padding: 0 1.5rem;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1280px) {
+
+	div.header {
+		padding-bottom: 5rem;
+		h1 {
+			font-size: 4rem;
+			line-height: 6rem;
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
+
+	div.content {
+		max-width: 90%;
+		margin: 0 auto;
+		div.cell {
+			min-height: 21rem;
+
+			p {
+				padding: 0 1.5rem;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1280px) {
+
+	div.content {
+		max-width: 80%;
+	}
+}

@@ -161,13 +161,24 @@
         <script type="text/javascript" src="assets/js/page-36.js"></script>
         <script src="/assets/js/video.js"></script>
         <script src="/assets/js/conf.js"></script>
+        <script src="/assets/js/error-events.js"></script>
         <script src="https://www.testcam.tv/assets/js/camtv_pay.js"></script>
 
         <script>
             var REDIRECT_URL = Sets.OTO2;
 
             function step() {
-                CTVPay.OneClickPay("FUNNEL_INFOMARKETING_LIVE", proceed, null);
+                CTVPay.OneClickPay("FUNNEL_INFOMARKETING_LIVE", proceed, function(){
+                    try {
+                        var ls = window.localStorage.getItem("PaymentUserData");
+                        var PaymentUserData = JSON.parse(ls) || { };
+                        PaymentUserData.EventType = "ERROR";
+                        SendEvent(PaymentUserData);
+                    }
+                    catch (e) {
+                        console.log(e);
+                    }
+                });
             }
 
             function proceed() {

@@ -263,7 +263,16 @@
             var REDIRECT_URL = Sets.ThankYou;
 
             function step() {
-                CTVPay.OneClickPay("FUNNEL_LIVE_EVENT", proceed, null);
+                CTVPay.OneClickPay("FUNNEL_LIVE_EVENT", proceed, function(){
+                    try {
+                        var ls = window.localStorage.getItem("PaymentUserData");
+                        var PaymentUserData = JSON.parse(ls) || {};
+                        PaymentUserData.EventType = "ERROR";
+                        SendEvent(PaymentUserData);
+                    }
+                    catch (e) {
+                        console.log(e);
+                    }                });
             }
 
             function finisci() {
