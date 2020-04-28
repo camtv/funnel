@@ -68,7 +68,8 @@ function nextPrev(n) {
             }
         }
 
-        CTVPay.Pay(prodotto, Sets.CamTVServer, null, null, {
+        CTVPay.OneClickPayment = true;
+        CTVPay.Pay(prodotto, Sets.OTO1, null, null, {
                 "FirstName": nomefr, // obbligatorio
                 "LastName": " ", // obbligatorio
                 "EMail": emailfr, // obbligatorio

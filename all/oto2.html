@@ -286,7 +286,13 @@
                 $("#nothx").attr("href", REDIRECT_URL);
 
                 setTimeout(function(){ ShowPurchaseUI(); }, Sets.OTO2_PurchaseUI_Timeout);
-            })
+            });
+
+            window.step = step;
+            window.finisci = finisci;
+            window.proceed = proceed;
+            window.ShowPurchaseUI = ShowPurchaseUI;
+
         </script>
 
     </body>
