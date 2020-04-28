@@ -118,8 +118,8 @@ function validateForm() {
     }
 
     // controllo email
-    ml = document.getElementById("email").value;
-    mlck = document.getElementById("emailck").value;
+    var ml = document.getElementById("email").value;
+    var mlck = document.getElementById("emailck").value;
     var result = ml.localeCompare(mlck);
     if (result !=0) {
         document.getElementById("emailck").value = "la mail non corrisponde";
