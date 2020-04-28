@@ -7,7 +7,7 @@ var toUIOto2 = 508000;
 var sCamTVServer = "https://www.cam.tv"
 
 if (host.indexOf("github") != -1) {
-    currrentLocation = "https://camtv.github.io/funnel/all/build";
+    currrentLocation = "https://camtv.github.io/funnel/build";
     toUIOto1 = 12000;
     toUIOto2 = 12000;
     sCamTVServer = 'https://www.testcam.tv';
