@@ -9,16 +9,6 @@
     <meta name="title" content="ATTENZIONE! IL TUO ORDINE NON E' ANCORA COMPLETO...">
     <meta name="description" content="Guarda attentamente questo breve video!">
 	
-	<!-- Google Tag Manager -->
-	<script>
-	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-W4R7WNS');
-	</script>
-	<!-- End Google Tag Manager -->
-
     <!--link rel="stylesheet" id="dashicons-css" href="./assets/css/dashicons.min.css" type="text/css" media="all"-->
 	<link rel="stylesheet" href="./assets/css/fonts.css" type="text/css" media="all">
     <link rel="stylesheet" id="op3-frontend-stylesheet-css" href="./assets/css/page-36.css" type="text/css" media="all">
@@ -38,9 +28,20 @@
 
     <script src="./assets/js/jquery.min.js.download"></script>
     <script src="https://www.testcam.tv/assets/js/camtv_pay.js"></script>
-    <script src="./assets/js/custom.js"></script>
 
-    <body class="opf_funnel-template opf_funnel-template-op_builder_blank single single-opf_funnel postid-36 logged-in admin-bar elementor-default customize-support" onload="setTimeout(appari, 743000)">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W4R7WNS');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="opf_funnel-template opf_funnel-template-op_builder_blank single single-opf_funnel postid-36 logged-in admin-bar elementor-default customize-support" onload="setTimeout(appari, 743000)">
 	
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4R7WNS"
@@ -99,7 +100,7 @@
                                                             <div class="op3-custom-html-wrapper" data-op-animation-trigger="none" data-op-animation-style="" data-op-animation-loop="0" data-op-timer-minutes="0" data-op-timer-seconds="0">
                                                                 <div data-op3-code-html="">
                                                                     <div class="tasto-audio">
-                                                                        <button onclick="restart()" id="btn-overlay"><img src="./assets/img/audio.png" class="pulso"></button>
+                                                                        <button onclick="VideoRestart(this)" id="btn-overlay"><img src="./assets/img/audio.png" class="pulso"></button>
 
                                                                     </div>
                                                                 </div>
@@ -108,7 +109,7 @@
                                                             <div class="op3-video-wrapper" data-op3-src="https://player.vimeo.com/video/406765881?autoplay=1&amp;background=0&amp;muted=1&amp;portrait=0&amp;byline=1&amp;title=0&amp;speed=0&amp;color=ff7c00&amp;loop=0" data-op3-video-source="vimeo" data-op3-video-url-youtube="" data-op3-video-url-vimeo="https://player.vimeo.com/video/406765881" data-op3-video-url-wistia="" data-op3-video-autoplay="1" data-op3-video-mute="1" data-op3-video-loop="0" data-op3-video-controls="1" data-op3-video-modest-branding="0" data-op3-video-related="0" data-op3-video-color="#ff7c00" data-op3-video-background="0" data-op3-video-byline="1" data-op3-video-portrait="0" data-op3-video-title="0" data-op3-video-speed="0" data-op3-video-start-time="00:00" data-op-animation-trigger="none" data-op-animation-style="" data-op-animation-loop="0" data-op-timer-minutes="0" data-op-timer-seconds="0">
                                                                 <div data-op3-code="" data-op3-aspect-ratio="16:9">
 
-                                                                    <iframe src="https://player.vimeo.com/video/406765881?autoplay=1&amp;background=0&amp;muted=1&amp;portrait=0&amp;byline=1&amp;title=0&amp;speed=0&amp;color=ff7c00&amp;loop=0" width="900" height="506" frameborder="0" allow="autoplay" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
+                                                                    <iframe id="video_vimeo" src="https://player.vimeo.com/video/406765881?autoplay=1&amp;background=0&amp;muted=1&amp;portrait=0&amp;byline=1&amp;title=0&amp;speed=0&amp;color=ff7c00&amp;loop=0" width="900" height="506" frameborder="0" allow="autoplay" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
 
                                                                 </div>
                                                             </div><div class="op3-video-image-overlay"><i class="op3-icon op3-icon-button-circle-play-2"></i></div>
@@ -160,8 +161,35 @@
 		
         <script type="text/javascript" src="./assets/js/page-36.js.download"></script>
 
-        <script src="./assets/js/player.js(1).download"></script>
         <script src="./assets/js/custom-footer.js"></script>
+        <script src="./assets/js/video.js"></script>
+        <script>
+            var REDIRECT_URL = "https://internetcreaindipendenza.it/funnel/03-oto2/index.html";
 
+            function appari() {
+                var element = document.getElementById("op3-element-Ia9Ju7VC");
+                element.classList.remove("nascondi");
+            }
+
+            function step() {
+                CTVPay.OneClickPay("ONE_CLICK_3", proceed, null);
+            }
+
+            function redirigi() {
+                var link = document.getElementById("nothx");
+                link.setAttribute("href", REDIRECT_URL);
+                return false;
+            }
+
+            redirigi();
+
+            function proceed() {
+                window.location.href = REDIRECT_URL;
+            }
+
+            CTVPay.OneClickPayment = true;
+
+
+        </script>
     </body>
 </html>
