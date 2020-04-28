@@ -13,3 +13,6 @@
 /all/dist/
 /all/node_modules/
 /all/error_signaler_api/node_modules/
+/dist/
+/error_signaler_api/node_modules/
+/node_modules/
