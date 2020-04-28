@@ -4090,6 +4090,8 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
         padding-top: 0px;
         padding-bottom: 15px;
         width: 55%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
         #op3-designer-element #op3-element-Ia9Ju7VC > [data-op3-element-container] > [data-op3-border] > [data-op3-background="overlay"]::before, #op3-designer-element #op3-element-Ia9Ju7VC > [data-op3-element-container] > [data-op3-border] > [data-op3-background="overlay"]::after {
