@@ -8,3 +8,8 @@
 /01-landingpage/node_modules/
 /02-oto1/node_modules/
 /03-oto2/node_modules/
+/all/.cache/
+/all/.idea/
+/all/dist/
+/all/node_modules/
+/all/error_signaler_api/node_modules/
