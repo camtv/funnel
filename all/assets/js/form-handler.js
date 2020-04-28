@@ -1,4 +1,4 @@
-import Sets from "config.js"
+import Sets from "./conf.js"
 
 /***************************************************** gestione form *********************/
 

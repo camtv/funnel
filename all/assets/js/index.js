@@ -1,5 +1,5 @@
 import $ from "jquery"
-import Sets from "./config.js"
+import Sets from "./conf.js"
 
 
 function DoIO(Endpoint,Params)
