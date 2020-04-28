@@ -5,7 +5,7 @@ function appari() {
 }
 
 function step() {
-	CTVPay.OneClickPay("ONE_CLICK_4", proceed, null);
+	CTVPay.OneClickPay("FUNNEL_LIVE_EVENT", proceed, null);
 }
 
 function finisci() {

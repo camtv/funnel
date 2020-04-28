@@ -51,18 +51,18 @@ function nextPrev(n) {
 	if(selezionato) {
         switch(nazfr) {
           case "ITA":
-            prodotto = "BUMP"
+            prodotto = "FUNNEL_BUMP"
             break;
           default:
-            prodotto = "BUMP_NO_ITA"
+            prodotto = "FUNNEL_BUMP_NO_ITA"
         }
     } else {
         switch(nazfr) {
           case "ITA":
-            prodotto = "BOOK_FUNNEL"
+            prodotto = "FUNNEL_BOOK"
             break;
           default:
-            prodotto = "BOOK_FUNNEL_NO_ITA"
+            prodotto = "FUNNEL_BOOK_NO_ITA"
         }
     }
 
