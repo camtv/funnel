@@ -11,4 +11,4 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{}],"NvjX":[function(require,module,exports) {
 "use strict";var e=t(require("jquery")),n=t(require("./config.js"));function t(e){return e&&e.__esModule?e:{default:e}}function r(n,t){return e.default.ajax({url:n,method:"POST",timeout:3e4,headers:{"Content-Type":"application/x-www-form-urlencoded"},data:t})}function o(){var e={};window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(n,t,r){e[t]=r});return e}function a(e,n){var t=n;return window.location.href.indexOf(e)>-1&&(t=o()[e]),t}var i=0;function u(e,t,o){return r(n.default.CamTVServer+"/api/purchases/setlead",{EMail:e,FirstName:t,LastName:o,LeadUUID:a("cid","Empty")}).done(function(){console.log("done")}).fail(function(){i<3&&(setTimeout(function(){u(e,t,o)},1500),i++)})}window.callAdLead=u;
 },{"jquery":"HlZQ","./config.js":"zCri"}]},{},["NvjX"], null)
-//# sourceMappingURL=/funnel/all/js.90ed8730.js.map
+//# sourceMappingURL=/funnel/all/build/js.90ed8730.js.map
