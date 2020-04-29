@@ -1,7 +1,7 @@
 
 var host = window.location.hostname;
 
-var currrentLocation = "https://www.internetcreaindipendenza.it";
+var currrentLocation = window.location.protocol + "//" + window.location.host + window.location.pathname.split('/').slice(0, -1).join('/');//"https://www.internetcreaindipendenza.it";
 var toUIOto1 = 743000;
 var toUIOto2 = 508000;
 var sCamTVServer = 'https://www.testcam.tv'; //"https://www.cam.tv"
