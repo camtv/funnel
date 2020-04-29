@@ -19,7 +19,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
+    <meta property="og:url" content="{{ DOMAIN_NAME_WITH_PROTOCOL || 'https://www.internetcreaindipendenza.it' }}">
     <meta property="og:title" content="QUESTA PAGINA NON SARÀ PIÙ ACCESSIBILE UNA VOLTA ABBANDONATA">
     <meta property="og:description" content="IMPORTANTE! Ascolta questo messaggio">
     <meta property="og:image" content="./assets/img/op-pag.jpg">
@@ -257,6 +257,7 @@
 		<script type="text/javascript" src="assets/js/page-36.js"></script>
         <script src="/assets/js/video.js"></script>
         <script src="/assets/js/conf.js"></script>
+        <script src="/assets/js/error-events.js"></script>
 
         <script>
             window.CAMTV_SERVER = "{{ CAMTV_SERVER || 'https://www.testcam.tv' }}";
