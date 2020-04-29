@@ -4,7 +4,7 @@ var host = window.location.hostname;
 var currrentLocation = "https://www.internetcreaindipendenza.it";
 var toUIOto1 = 743000;
 var toUIOto2 = 508000;
-var sCamTVServer = 'https://www.testcam.tv'; //"https://www.cam.tv"
+var sCamTVServer = 'https://www.testcam.tv'; //"https://www.cam.tv" 
 
 if (host.indexOf("github") != -1) {
     currrentLocation = "https://camtv.github.io/funnel/build";
