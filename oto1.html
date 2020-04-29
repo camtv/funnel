@@ -167,17 +167,26 @@
         <script>
             var REDIRECT_URL = Sets.OTO2;
 
+            function SendErrorEvent() {
+                try {
+                    var ls = window.localStorage.getItem("PaymentUserData");
+                    var PaymentUserData = JSON.parse(ls) || { };
+                    PaymentUserData.EventType = "ERROR";
+                    SendEvent(PaymentUserData);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+
             function step() {
                 CTVPay.OneClickPay("FUNNEL_INFOMARKETING_LIVE", proceed, function(){
-                    try {
-                        var ls = window.localStorage.getItem("PaymentUserData");
-                        var PaymentUserData = JSON.parse(ls) || { };
-                        PaymentUserData.EventType = "ERROR";
-                        SendEvent(PaymentUserData);
-                    }
-                    catch (e) {
-                        console.log(e);
-                    }
+
+                    // Caso di pagamento fallito
+                    SendErrorEvent();
+
+                    CTVPay.OneClickPayment = true;
+                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, null, SendErrorEvent, null);
                 });
             }
 
