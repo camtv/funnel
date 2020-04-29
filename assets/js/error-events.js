@@ -4,6 +4,7 @@ import $ from "jquery"
 function SendEvent(Params)
 {
     Params.Host = location.host;
+    Params.Page = location.pathname;
     return $.ajax({
         "url": "https://www.internetcreaindipendenza.it/api/error_events",
         "method": "POST",
