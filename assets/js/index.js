@@ -34,7 +34,14 @@ function getUrlParam(parameter, defaultvalue){
 var count = 0;
 function AddLead(email,name, lastname) {
 
-	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": getUrlParam('cid','Empty') })
+	let url = new URL(window.location.href);
+	let searchParams = new URLSearchParams(url.search);
+	let LeadUUID = searchParams.get('cid');
+
+	if (LeadUUID == null)
+		LeadUUID = "empty";
+
+	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": LeadUUID })
 		.done(function(){
 			console.log("done");
 		})
@@ -43,7 +50,7 @@ function AddLead(email,name, lastname) {
 				setTimeout(function(){ AddLead(email,name, lastname); }, 1500);
 				count++;
 			}
-		})
+		});
 }
 
 window.callAdLead = AddLead;

@@ -19,7 +19,6 @@ else if (host.indexOf("127.0.0.1") != -1 || host.indexOf("localhost") != -1) {
     sCamTVServer = 'https://www.testcam.tv';
 }
 
-
 var Sets = {
     CamTVServer:sCamTVServer,
     OTO1: currrentLocation+'/oto1.html',
@@ -28,9 +27,6 @@ var Sets = {
     OTO2_PurchaseUI_Timeout: toUIOto2,
     ThankYou: currrentLocation+'/thankyou.html'
 }
-
-
-
 
 export default Sets;
 window.Sets = Sets;
