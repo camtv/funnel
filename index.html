@@ -29,7 +29,6 @@
 	<link rel="stylesheet" id="op3-custom-css" href="./assets/css/custom-head.css" type="text/css" media="all">
 
 
-	<script src="https://www.testcam.tv/assets/js/camtv_pay.js"></script>
 	<script src="assets/js/index.js"></script>
 
 
@@ -2346,6 +2345,11 @@
 	<link rel="stylesheet" href="./assets/css/free.min.css" media="all">
 
 	<script type="text/javascript" src="assets/js/page-20.js"></script>
+
+	<script>
+		window.CAMTV_SERVER = "{{ CAMTV_SERVER || 'https://www.testcam.tv' }}";
+	</script>
+	<script src="{{ CAMTV_SERVER || 'https://www.testcam.tv' }}/assets/js/camtv_pay.js"></script>
 
 	<script src="./assets/js/form-handler.js"></script>
 	<script src="./assets/js/error-events.js"></script>

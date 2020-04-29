@@ -257,7 +257,11 @@
 		<script type="text/javascript" src="assets/js/page-36.js"></script>
         <script src="/assets/js/video.js"></script>
         <script src="/assets/js/conf.js"></script>
-        <script src="https://www.testcam.tv/assets/js/camtv_pay.js"></script>
+
+        <script>
+            window.CAMTV_SERVER = "{{ CAMTV_SERVER || 'https://www.testcam.tv' }}";
+        </script>
+        <script src="{{ CAMTV_SERVER || 'https://www.testcam.tv' }}/assets/js/camtv_pay.js"></script>
 
         <script>
             var REDIRECT_URL = Sets.ThankYou;

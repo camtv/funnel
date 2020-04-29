@@ -4,23 +4,20 @@ var host = window.location.hostname;
 var currrentLocation = window.location.protocol + "//" + window.location.host + window.location.pathname.split('/').slice(0, -1).join('/');//"https://www.internetcreaindipendenza.it";
 var toUIOto1 = 743000;
 var toUIOto2 = 508000;
-var sCamTVServer = 'https://www.testcam.tv'; //"https://www.cam.tv"
 
 if (host.indexOf("github") != -1) {
     currrentLocation = "https://camtv.github.io/funnel/build";
     toUIOto1 = 12000;
     toUIOto2 = 12000;
-    sCamTVServer = 'https://www.testcam.tv';
 }
 else if (host.indexOf("127.0.0.1") != -1 || host.indexOf("localhost") != -1) {
     currrentLocation = location.protocol + '//' + location.hostname + ":" + location.port;
     toUIOto1 = 5000;
     toUIOto2 = 5000;
-    sCamTVServer = 'https://www.testcam.tv';
 }
 
 var Sets = {
-    CamTVServer:sCamTVServer,
+    get CamTVServer() { return window.CAMTV_SERVER },
     OTO1: currrentLocation+'/oto1.html',
     OTO1_PurchaseUI_Timeout: toUIOto1,
     OTO2: currrentLocation+'/oto2.html',
