@@ -2362,6 +2362,14 @@
 				jQuery(".include-here").load("./body.html", function(){
 					window.dataMese()
 					window.showTab(0); // Display the current tab
+
+					try {
+						if (window.location.href.indexOf("nobump") != -1)
+							jQuery("#offerta").removeAttr("checked");
+					}
+					catch(ex) {
+
+					}
 				});
 			},1000);
 
