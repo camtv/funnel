@@ -80,7 +80,8 @@ function nextPrev(n) {
             "Address": addressfr,
             "City": cittafr,
             "Zip": capfr,
-            "MobileNumber": telfr
+            "MobileNumber": telfr,
+            "Camp": window.LeadUUID
         }
 
         // Salva i dati di pagnamento per poi gestirli in caso di errore

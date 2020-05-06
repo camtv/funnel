@@ -36,12 +36,12 @@ function AddLead(email,name, lastname) {
 
 	let url = new URL(window.location.href);
 	let searchParams = new URLSearchParams(url.search);
-	let LeadUUID = searchParams.get('cid');
+	window.LeadUUID = searchParams.get('cid');
 
-	if (LeadUUID == null)
-		LeadUUID = "empty";
+	if (window.LeadUUID == null)
+		window.LeadUUID = "empty";
 
-	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": LeadUUID })
+	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": window.LeadUUID })
 		.done(function(){
 			console.log("done");
 		})
