@@ -31,15 +31,31 @@ function getUrlParam(parameter, defaultvalue){
 	return urlparameter;
 }
 
+function getUrlParameter(name) {
+	if (window.URLSearchParams != null) {
+		var url = new URL(window.location.href);
+		var searchParams = new URLSearchParams(url.search);
+		return searchParams.get('cid');
+	}
+	else {
+		name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+		var results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	}
+};
+
 var count = 0;
 function AddLead(email,name, lastname) {
 
-	let url = new URL(window.location.href);
-	let searchParams = new URLSearchParams(url.search);
-	window.LeadUUID = searchParams.get('cid');
+	try {
+		window.LeadUUID = getUrlParameter('cid');
+	}
+	catch (Ex) {
+	}
 
 	if (window.LeadUUID == null)
-		window.LeadUUID = "empty";
+		window.LeadUUID = email;
 
 	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": window.LeadUUID })
 		.done(function(){
