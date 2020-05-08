@@ -175,6 +175,8 @@
         <script>
             var REDIRECT_URL = Sets.OTO2;
 
+            var PaymentUserData = null;
+
             function SendErrorEvent() {
                 try {
                     var ls = window.localStorage.getItem("PaymentUserData");
@@ -194,8 +196,8 @@
                     SendErrorEvent();
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, null, SendErrorEvent, null);
-                });
+                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                },PaymentUserData);
             }
 
             function step_rate() {
@@ -205,8 +207,8 @@
                     SendErrorEvent();
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE_RATE", REDIRECT_URL, null, SendErrorEvent, null);
-                });
+                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE_RATE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                },PaymentUserData);
             }
 
             function proceed() {
@@ -221,6 +223,14 @@
             $(document).ready(function(){
 
                 CTVPay.OneClickPayment = true;
+
+                // Carica i dati di pagnamento
+                try {
+                    PaymentUserData = JSON.parse(window.localStorage.getItem("PaymentUserData"));
+                }
+                catch (e) {
+                    console.error(e);
+                }
 
                 $("#nothx").attr("href", REDIRECT_URL);
 

@@ -267,6 +267,9 @@
         <script>
             var REDIRECT_URL = Sets.ThankYou;
 
+            var PaymentUserData = null;
+
+
             function SendErrorEvent() {
                 try {
                     var ls = window.localStorage.getItem("PaymentUserData");
@@ -286,8 +289,8 @@
                     SendErrorEvent();
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_LIVE_EVENT", REDIRECT_URL, null, SendErrorEvent, null);
-                });
+                    CTVPay.Pay("FUNNEL_LIVE_EVENT", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                },PaymentUserData);
             }
 
             function finisci() {
@@ -306,6 +309,14 @@
             $(document).ready(function(){
 
                 CTVPay.OneClickPayment = true;
+
+                // Carica i dati di pagnamento
+                try {
+                    PaymentUserData = JSON.parse(window.localStorage.getItem("PaymentUserData"));
+                }
+                catch (e) {
+                    console.error(e);
+                }
 
                 $("#nothx").attr("href", REDIRECT_URL);
 
