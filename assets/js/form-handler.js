@@ -1,6 +1,8 @@
 import Sets from "./conf.js"
 import $ from 'jquery';
 import SendEvent from './error-events'
+import { parsePhoneNumberFromString } from 'libphonenumber-js'
+import  getCountryISO2  from "country-iso-3-to-2";
 
 /***************************************************** gestione form *********************/
 
@@ -119,14 +121,21 @@ function nextPrev(n) {
 
     // prima conferma dati
 
+
     var nomefr = document.getElementById("name").value;
     var emailfr = document.getElementById("email").value;
+    var addressfr = document.getElementById("address").value;
+    var cittafr = document.getElementById("citta").value;
+    var capfr = document.getElementById("cap").value;
+    var telfr = document.getElementById("tel").value;
+    var nazfr = document.getElementById("naz").value;
     var res = nomefr.split(" ");
     var nome = res[0];
     var cognome = res[1];
 
     if (n >= 0)
-        callAdLead(emailfr, nome, cognome);
+        callAdLead(emailfr, nome, cognome, addressfr, cittafr, capfr, telfr, nazfr);
+
     //alert("passo");
 
     // Otherwise, display the correct tab:
@@ -146,6 +155,19 @@ function validateForm() {
             y[i].className += " invalid";
             // and set the current valid status to false:
             valid = false;
+        }
+        if (y[i].id=='tel') {
+
+            var Naz = getCountryISO2($("#naz").val());
+            var num = $("#tel").val();
+            const phoneNumber = parsePhoneNumberFromString(num,Naz)
+            valid = false;
+            if (phoneNumber) {
+                valid = (phoneNumber.isValid() === true);
+            }
+
+            if (valid == false)
+                y[i].className += " invalid";
         }
     }
 

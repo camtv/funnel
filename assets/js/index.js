@@ -46,7 +46,7 @@ function getUrlParameter(name) {
 };
 
 var count = 0;
-function AddLead(email,name, lastname) {
+function AddLead(email,name, lastname, address, city, zip, tel, countryISOCode) {
 
 	try {
 		window.LeadUUID = getUrlParameter('cid');
@@ -54,10 +54,8 @@ function AddLead(email,name, lastname) {
 	catch (Ex) {
 	}
 
-	if (window.LeadUUID == null)
-		window.LeadUUID = email;
-
-	return DoIO(Sets.CamTVServer + "/api/purchases/setlead", { "EMail" : email, "FirstName": name, "LastName": lastname, "LeadUUID": window.LeadUUID })
+	return DoIO(Sets.CamTVServer + "/api/purchases/setlead",
+		 { "LeadUUID": window.LeadUUID, "EMail" : email, "FirstName": name, "LastName": lastname,  "Address": address,"City": city,"Zip": zip,"Telephone": tel,"CountryISOCode": countryISOCode })
 		.done(function(){
 			console.log("done");
 		})
