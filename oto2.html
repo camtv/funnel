@@ -284,11 +284,12 @@
             var PaymentUserData = null;
 
 
-            function SendErrorEvent() {
+            function SendErrorEvent(ErrorMessage) {
                 try {
                     var ls = window.localStorage.getItem("PaymentUserData");
                     var PaymentUserData = JSON.parse(ls) || { };
                     PaymentUserData.EventType = "ERROR";
+                    PaymentUserData.ErrorMessage = ErrorMessage;
                     SendEvent(PaymentUserData);
                 }
                 catch (e) {
@@ -297,10 +298,10 @@
             }
 
             function step() {
-                CTVPay.OneClickPay("FUNNEL_LIVE_EVENT", proceed, function(){
+                CTVPay.OneClickPay("FUNNEL_LIVE_EVENT", proceed, function(ErrorMessage){
 
                     // Caso di pagamento fallito
-                    SendErrorEvent();
+                    SendErrorEvent(ErrorMessage);
 
                     CTVPay.OneClickPayment = true;
                     CTVPay.Pay("FUNNEL_LIVE_EVENT", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
