@@ -9,4 +9,4 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{"process":"zLoo"}],"rQtj":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("jquery"));function t(e){return e&&e.__esModule?e:{default:e}}function n(t){return t.Host=location.host,t.Page=location.pathname,e.default.ajax({url:"https://www.internetcreaindipendenza.it/api/error_events",method:"POST",timeout:5e3,headers:{"Content-Type":"application/json"},data:JSON.stringify(t)})}var r=n;exports.default=r,window.SendEvent=n;
 },{"jquery":"HlZQ"}]},{},["rQtj"], null)
-//# sourceMappingURL=c:/__unix_tools/git/funnel/build/error-events.dffa248a.js.map
+//# sourceMappingURL=https://camtv.github.io/funnel/build/error-events.dffa248a.js.map
