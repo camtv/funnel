@@ -156,7 +156,7 @@ function validateForm() {
             // and set the current valid status to false:
             valid = false;
         }
-        if (y[i].id=='tel') {
+        else if (y[i].id=='tel') {
 
             var Naz = getCountryISO2($("#naz").val());
             var num = $("#tel").val();
