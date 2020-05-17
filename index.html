@@ -3354,12 +3354,12 @@
 			catch(ex) {
 
 			}
-			window.dataMese()
+
 			window.showTab(0); // Display the current tab
 
 			setTimeout(function() {
 				jQuery(".include-here").load("./body.html", function(){
-
+					window.dataMese()
 				});
 			},1000);
 
