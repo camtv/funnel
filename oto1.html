@@ -235,6 +235,20 @@
                 element.classList.remove("nascondi");
             }
 
+            function getUrlParameter(name) {
+                if (window.URLSearchParams != null) {
+                    var url = new URL(window.location.href);
+                    var searchParams = new URLSearchParams(url.search);
+                    return searchParams.get('cid');
+                }
+                else {
+                    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                    var results = regex.exec(location.search);
+                    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+                }
+            };
+
             $(document).ready(function(){
 
                 CTVPay.OneClickPayment = true;
@@ -248,6 +262,9 @@
                 }
 
                 $("#nothx").attr("href", REDIRECT_URL);
+
+                if (getUrlParameter("show") != null)
+                    ShowPurchaseUI();
 
                 setTimeout(function(){ ShowPurchaseUI(); }, Sets.OTO1_PurchaseUI_Timeout);
             })
