@@ -32,6 +32,7 @@
 					color:white;
 					padding: 0;
 					padding-bottom: 20px;
+
 					img {
 						padding: 0 15px;
 					}
@@ -60,7 +61,6 @@
 			}
 		}
 	}
-
 
 	h1 {
 		position: relative;
@@ -92,8 +92,10 @@
 				}
 			}
 		}
+	}
 
-
+	#op3-designer-element #op3-element-xDFLv3QT {
+		margin: auto;
 	}
 }
 
@@ -134,5 +136,26 @@
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-width:375px) {
+	.heading {
+		.op3-headline-wrapper div h2 {
+			margin-top: 10px;
+			line-height: 18px;
+		}
+	}
+
+	#op3-designer-element #op3-element-iEnETiq7 {
+		padding-bottom: 5px;
+	}
+
+	#op3-designer-element #op3-element-p2ZUbPyw {
+		padding-bottom:7px;
+	}
+
+	#op3-designer-element #op3-element-unMBkYzQ {
+		padding-top:0;
 	}
 }
