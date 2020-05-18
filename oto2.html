@@ -325,7 +325,7 @@
                 if (window.URLSearchParams != null) {
                     var url = new URL(window.location.href);
                     var searchParams = new URLSearchParams(url.search);
-                    return searchParams.get('cid');
+                    return searchParams.get(name);
                 }
                 else {
                     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
