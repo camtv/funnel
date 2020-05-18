@@ -13,6 +13,16 @@
 		}
 
 		form {
+
+			input, select {
+				color: blacK;
+			}
+
+			input.invalid {
+				background-color: #ffdddd;
+				border: 2px solid red;
+			}
+
 			.tab1 {
 				padding: 0px;
 
@@ -58,7 +68,7 @@
 		font-size: 35px;
 		text-transform: uppercase;
 		text-align: center;
-		text-shadow: rgba(0, 0, 0, 0.3) 0px 6px 0px;
+		text-shadow: rgba(0, 0, 0, 0.3) 0px 4px 0px;
 		line-height: 1.2em;
 		color: white;
 		margin-bottom: 30px;
@@ -94,6 +104,7 @@
 		h1 {
 			font-size: 60px;
 			margin-bottom: 50px;
+			text-shadow: rgba(0, 0, 0, 0.3) 0px 6px 0px;
 		}
 
 		.pure-g {
