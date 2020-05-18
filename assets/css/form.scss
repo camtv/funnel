@@ -1,0 +1,127 @@
+#FORM-CONTAINER.form-wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 20px 0;
+
+	.pure-g {
+		padding: 0px;
+
+		.left-col {
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		form {
+			.tab1 {
+				padding: 0px;
+
+				.box-offerta {
+					background-color: rgba(0,0,0,0.2);
+					border: 1px solid rgba(255,255,255,0.2);
+					color:white;
+					padding: 0;
+					padding-bottom: 20px;
+					img {
+						padding: 0 15px;
+					}
+
+					p {
+						font-size: 15px;
+						padding: 0 10px;
+					}
+
+					.aggiunta {
+						color: #FF8D00;
+						font-size: 18px;
+
+					}
+				}
+
+				.riepilogo {
+					padding: 20px 10px;
+					.primariga {
+						max-width: 100% !important;
+						.dxx {
+							width: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	h1 {
+		position: relative;
+		font-family: "Barlow Condensed", sans-serif !important;
+		font-size: 35px;
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: rgba(0, 0, 0, 0.3) 0px 6px 0px;
+		line-height: 1.2em;
+		color: white;
+		margin-bottom: 30px;
+	}
+
+	div {
+		position: relative;
+	}
+
+}
+
+@media (screen and min-width: 768px) {
+	#FORM-CONTAINER.form-wrapper {
+
+		.pure-g {
+			padding: 5px;
+
+			form {
+				.tab1 {
+					padding: 5px;
+				}
+			}
+		}
+
+
+	}
+}
+
+@media (screen and min-width: 1024px) {
+	#FORM-CONTAINER.form-wrapper {
+		padding: 20px;
+
+		h1 {
+			font-size: 60px;
+			margin-bottom: 50px;
+		}
+
+		.pure-g {
+			padding: 20px;
+
+			.left-col {
+				padding: 40px;
+				text-align: center;
+			}
+
+		}
+	}
+}
+
+@media (screen and min-width: 1280px) {
+	#FORM-CONTAINER.form-wrapper {
+
+		.pure-g {
+
+			form {
+				.tab1 {
+					.box-offerta {
+						.aggiunta {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -11,6 +11,7 @@ function showTab(n) {
     // This function will display the specified tab of the form ...
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
+    $(x[n]).removeClass("hidden");
     // ... and fix the Previous/Next buttons:
     if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
@@ -24,6 +25,8 @@ function showTab(n) {
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
+
+    location.href = "#FORM-BEGIN";
 }
 
 function nextPrev(n) {
