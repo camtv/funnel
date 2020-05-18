@@ -7,7 +7,7 @@ import  getCountryISO2  from "country-iso-3-to-2";
 /***************************************************** gestione form *********************/
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
-function showTab(n) {
+function showTab(n,doNotGoToFormBegin) {
     // This function will display the specified tab of the form ...
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
@@ -26,7 +26,8 @@ function showTab(n) {
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
 
-    location.href = "#FORM-BEGIN";
+    if (doNotGoToFormBegin != true)
+        location.href = "#FORM-BEGIN";
 }
 
 function nextPrev(n) {
