@@ -211,7 +211,8 @@
                     SendErrorEvent(ErrorMessage);
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    // CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    CTVPay.NewPay("FUNNEL_INFOMARKETING_LIVE", REDIRECT_URL, "", PaymentUserData);
                 },PaymentUserData);
             }
 
@@ -222,7 +223,8 @@
                     SendErrorEvent();
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE_RATE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    // CTVPay.Pay("FUNNEL_INFOMARKETING_LIVE_RATE", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    CTVPay.NewPay("FUNNEL_INFOMARKETING_LIVE_RATE", REDIRECT_URL, "", PaymentUserData);
                 },PaymentUserData);
             }
 

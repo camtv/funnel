@@ -304,7 +304,8 @@
                     SendErrorEvent(ErrorMessage);
 
                     CTVPay.OneClickPayment = true;
-                    CTVPay.Pay("FUNNEL_LIVE_EVENT", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    // CTVPay.Pay("FUNNEL_LIVE_EVENT", REDIRECT_URL, null, SendErrorEvent, PaymentUserData);
+                    CTVPay.NewPay("FUNNEL_LIVE_EVENT", REDIRECT_URL, "", PaymentUserData);
                 },PaymentUserData);
             }
 

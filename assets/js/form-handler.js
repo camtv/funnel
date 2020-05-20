@@ -113,7 +113,8 @@ function nextPrev(n) {
         $(".payment-overlay i").off().click(fnOnPayEnd);
 
         CTVPay.OneClickPayment = true;
-        CTVPay.Pay(prodotto, Sets.OTO1, fnOnPayEnd, fnOnPayError, PaymentUserData);
+        // CTVPay.Pay(prodotto, Sets.OTO1, fnOnPayEnd, fnOnPayError, PaymentUserData);
+        CTVPay.NewPay(prodotto, Sets.OTO1, "", PaymentUserData);
 
         ///////////////////////////////////////////////////////////////////////////////////////////// FINE CHIAMATA
         return false;
