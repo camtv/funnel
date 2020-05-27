@@ -3180,14 +3180,29 @@
 	<script src="./assets/js/video.js"></script>
 	<script>
 
+		function getUrlParameter(name) {
+			if (window.URLSearchParams != null) {
+				var url = new URL(window.location.href);
+				var searchParams = new URLSearchParams(url.search);
+				return searchParams.get(name);
+			}
+			else {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			}
+		};
+
 		jQuery(document).ready(function(){
 
 			try {
-				if (window.location.href.indexOf("nobump") != -1) {
-					jQuery("#offerta").removeAttr("checked");
-					tot();
+				jQuery("#offerta").removeAttr('checked','checked');
+				var YesBump = getUrlParameter("yesbump");
+				if (YesBump!=null && (YesBump == "1" || YesBump.toLowerCase()=="true")) {
+					jQuery("#offerta").attr('checked','checked')
 				}
-
+				tot();
 			}
 			catch(ex) {
 
