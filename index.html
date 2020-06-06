@@ -663,6 +663,7 @@
 																								data-op3-contenteditable="">
 																								<div>ottieni la tua
 																									copia gratis</div>
+																								<div class="disclaimer">Copri solo €7,95 di stampa e spedizione</div>
 																							</div>
 																						</div>
 																						<div class="op3-subtext op3-html2"
@@ -1177,7 +1178,7 @@
 			<div id="op3-element-WJCCpeMd" class="op3-element " data-op3-uuid="WJCCpeMd" data-op3-gid=""
 				data-op3-element-type="section" data-op3-element-spec="" data-op3-code-before="" data-op3-code-after=""
 				data-op3-visibility-hidden="0" data-op3-element-hidden="0" data-op3-style-id=""
-				data-op3-has-children="1">
+				data-op3-has-children="1" style="padding-bottom:0;">
 				<div data-op3-element-container="" data-op-animation-trigger="" data-op-animation-style=""
 					data-op-animation-loop="" data-op-timer-minutes="" data-op-timer-seconds="" data-op3-sticky=""
 					data-op3-sticky-active-desktop="" data-op3-sticky-active-tablet="" data-op3-sticky-active-mobile=""
@@ -2146,7 +2147,7 @@
 			<div id="op3-element-x20wEDCx" class="op3-element " data-op3-uuid="x20wEDCx" data-op3-gid=""
 				data-op3-element-type="section" data-op3-element-spec="" data-op3-code-before="" data-op3-code-after=""
 				data-op3-visibility-hidden="0" data-op3-element-hidden="0" data-op3-style-id=""
-				data-op3-has-children="1">
+				data-op3-has-children="1" style="padding-top:0;">
 				<div data-op3-element-container="" data-op-animation-trigger="" data-op-animation-style=""
 					data-op-animation-loop="" data-op-timer-minutes="" data-op-timer-seconds="" data-op3-sticky=""
 					data-op3-sticky-active-desktop="" data-op3-sticky-active-tablet="" data-op3-sticky-active-mobile=""
@@ -2238,6 +2239,7 @@
 																	class="op3-divider"></span>
 																<div class="op3-text" data-op3-contenteditable="">
 																	<div>ottieni la tua copia gratis</div>
+																	<div class="disclaimer">Copri solo €7,95 di stampa e spedizione</div>
 																</div>
 															</div>
 															<div class="op3-subtext op3-html2"
@@ -2840,13 +2842,14 @@
 										<div class="tastoni">
 											<div>
 												<button type="button" id="nextBtn"
-														onclick="nextPrev(1)"><i
+														onclick="SubmitLead()"><i
 														class="fas fa-shipping-fast"
-														aria-hidden="true"></i> Inviamelo
-													GRATIS!<br><span
-															class="txt-btn">Partecipa
-															all'offerta
-															speciale.</span></button>
+														aria-hidden="true"></i>
+															Inviamelo GRATIS!<br>
+													<span class="txt-btn">
+														Partecipa all'Offerta Speciale.
+													</span>
+												</button>
 												<button type="button" id="prevBtn"
 														onclick="nextPrev(-1)" class="correggi"
 														style="display: none;">Oppure correggi i
@@ -2891,7 +2894,7 @@
 						<div id="op3-element-s3Q5Xp4R" class="op3-element " data-op3-uuid="s3Q5Xp4R" data-op3-gid=""
 							 data-op3-element-type="row" data-op3-element-spec="" data-op3-code-before=""
 							 data-op3-code-after="" data-op3-visibility-hidden="0" data-op3-element-hidden="0"
-							 data-op3-style-id="" data-op3-has-children="1">
+							 data-op3-style-id="" data-op3-has-children="1" >
 							<div data-op3-element-container="" data-op-animation-trigger="" data-op-animation-style=""
 								 data-op-animation-loop="" data-op-timer-minutes="" data-op-timer-seconds=""
 								 data-op3-sticky="" data-op3-sticky-active-desktop="" data-op3-sticky-active-tablet=""
@@ -3180,6 +3183,17 @@
 	<script src="./assets/js/video.js"></script>
 	<script>
 
+		function SubmitLead()
+		{
+			if (nextPrev(1) == false)
+				return;
+
+			try {
+				fbq('track', 'InitiateCheckout');
+			}
+			catch { }
+		}
+
 		function getUrlParameter(name) {
 			if (window.URLSearchParams != null) {
 				var url = new URL(window.location.href);
@@ -3217,6 +3231,8 @@
 			},1000);
 
 		});
+
+
 
 	</script>
 	<div class="payment-overlay hidden">

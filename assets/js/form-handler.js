@@ -21,7 +21,7 @@ function showTab(n,doNotGoToFormBegin) {
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "SPEDISCI IL MIO LIBRO ADESSO!<br><span class='txt-btn'>100% pagamento sicuro</span>";
     } else {
-        document.getElementById("nextBtn").innerHTML = "<i class='fas fa-shipping-fast'></i> Inviamelo GRATIS!<br><span class='txt-btn'>Partecipa all'offerta speciale.</span>";
+        document.getElementById("nextBtn").innerHTML = "<i class='fas fa-shipping-fast'></i> Inviamelo GRATIS!<br><span class='txt-btn'>Partecipa all'Offerta Speciale.</span>";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
@@ -41,6 +41,7 @@ function nextPrev(n) {
 
     var prevTab = currentTab;
     currentTab = currentTab + n;
+
 
     // if you have reached the end of the form... :
     if (currentTab >= tabs.length) {

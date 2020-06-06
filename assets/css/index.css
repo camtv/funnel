@@ -3089,7 +3089,8 @@ html[data-jquery-mmdnd-dragging] .op3-element[data-op3-element-type=popoverlay] 
 
 @media (max-width:767px) {
     .op3-element[data-op3-element-type=row] {
-        padding: 15px 30px
+        padding: 15px 30px;
+        margin-top: 50px;
     }
 
         .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=row], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=featureblock], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=testimonial], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=numberblock] {
@@ -4224,7 +4225,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-evczCL0i#op3-element-evczCL0i#op3-element-evczCL0i > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -4841,7 +4842,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-QFIHJGwX#op3-element-QFIHJGwX#op3-element-QFIHJGwX > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -5121,7 +5122,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-rlO2Ljhf#op3-element-rlO2Ljhf#op3-element-rlO2Ljhf > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -5319,7 +5320,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-8SL2QBRk#op3-element-8SL2QBRk#op3-element-8SL2QBRk > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -5693,7 +5694,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-oH9gmMLj#op3-element-oH9gmMLj#op3-element-oH9gmMLj > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -5887,7 +5888,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-V6F5lE3L#op3-element-V6F5lE3L#op3-element-V6F5lE3L > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -6135,7 +6136,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-Yl58p2jW#op3-element-Yl58p2jW#op3-element-Yl58p2jW > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -6417,7 +6418,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-AF80zcVp#op3-element-AF80zcVp#op3-element-AF80zcVp > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -6766,7 +6767,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-WtVXyxyQ#op3-element-WtVXyxyQ#op3-element-WtVXyxyQ > a {
         color: rgb(255, 255, 255);
-        height: 106px;
+        height: 115px;
         font-family: "Barlow Condensed", sans-serif;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -6963,7 +6964,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
         letter-spacing: 0px;
         text-transform: uppercase;
         text-align: center;
-        text-shadow: rgba(54, 55, 57, 0.87) 4px 2px 0px;
+        text-shadow: rgba(54, 55, 57, 0.87) 2px 2px 0px;
         text-decoration: underline;
         font-style: italic;
     }
@@ -7169,7 +7170,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     #op3-designer-element #op3-element-s3Q5Xp4R {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 50px;
+        margin-top: 0px;
     }
 
     #op3-designer-element #op3-element-vRP2aHWx > [data-op3-element-container] > [data-op3-border] > [data-op3-background="base"]::before, #op3-designer-element #op3-element-vRP2aHWx > [data-op3-element-container] > [data-op3-border] > [data-op3-background="base"]::after {
@@ -8413,7 +8414,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
     #op3-designer-element #op3-element-JUoMmMAB#op3-element-JUoMmMAB#op3-element-JUoMmMAB > a {
-        height: 87px;
+        height: 120px;
     }
 
     #op3-designer-element #op3-element-4VuDaZ21#op3-element-4VuDaZ21#op3-element-4VuDaZ21 {
@@ -8530,7 +8531,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
     #op3-designer-element #op3-element-Z008Cc2D#op3-element-Z008Cc2D#op3-element-Z008Cc2D [data-op3-contenteditable] > * {
-        font-size: 35px;
+        font-size: 33px;
     }
 
     #op3-designer-element #op3-element-Z008Cc2D#op3-element-Z008Cc2D#op3-element-Z008Cc2D {
@@ -9054,7 +9055,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
     #op3-designer-element #op3-element-4lprfzen#op3-element-4lprfzen#op3-element-4lprfzen [data-op3-contenteditable] > * {
-        font-size: 35px;
+        //font-size: 35px;
     }
 
     #op3-designer-element #op3-element-4lprfzen#op3-element-4lprfzen#op3-element-4lprfzen {
@@ -9438,5 +9439,20 @@ div.payment-overlay h3 {
     }
     40% {
         box-shadow: 0 2.5em 0 0;
+    }
+}
+
+div.disclaimer {
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 5px;
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    div.disclaimer {
+        font-size: 18px;
     }
 }
