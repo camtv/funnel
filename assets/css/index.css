@@ -3090,7 +3090,7 @@ html[data-jquery-mmdnd-dragging] .op3-element[data-op3-element-type=popoverlay] 
 @media (max-width:767px) {
     .op3-element[data-op3-element-type=row] {
         padding: 15px 30px;
-        margin-top: 50px;
+
     }
 
         .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=row], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=featureblock], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=testimonial], .op3-element[data-op3-element-type=row] .op3-element[data-op3-element-type=numberblock] {
