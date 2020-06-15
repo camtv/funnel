@@ -3494,7 +3494,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
         #op3-designer-element #op3-element-xLcP79J1#op3-element-xLcP79J1#op3-element-xLcP79J1 .op3-headline-wrapper {
-            padding-bottom: 0px;
+            padding-bottom: 5px;
             padding-top: 0px;
         }
 
@@ -3583,7 +3583,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-JUoMmMAB#op3-element-JUoMmMAB#op3-element-JUoMmMAB > a {
         color: rgb(255, 255, 255);
-        padding: 20px;
+        padding: 10px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -3667,7 +3667,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
         #op3-designer-element #op3-element-zIPynku6#op3-element-zIPynku6#op3-element-zIPynku6 [data-op3-contenteditable] > * {
-            font-size: 20px;
+            font-size: 18px;
             text-transform: none;
         }
 
@@ -3689,6 +3689,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     #op3-designer-element #op3-element-BhSJJ1C2 {
         margin-left: auto;
         margin-right: auto;
+        padding-top: 0;
     }
 
     #op3-designer-element #op3-element-kBDe6enR {
@@ -8395,7 +8396,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
     #op3-designer-element #op3-element-iEnETiq7 {
-        padding-top: 8px;
+        padding-top: 5px;
         padding-bottom: 12px;
         padding-left: 10px;
         padding-right: 10px;
@@ -8410,7 +8411,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
     }
 
     #op3-designer-element #op3-element-JUoMmMAB#op3-element-JUoMmMAB#op3-element-JUoMmMAB > a .op3-text-container {
-        font-size: 35px;
+        font-size: 27px;
     }
 
     #op3-designer-element #op3-element-JUoMmMAB#op3-element-JUoMmMAB#op3-element-JUoMmMAB > a {
