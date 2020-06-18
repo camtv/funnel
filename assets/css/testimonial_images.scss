@@ -1,0 +1,42 @@
+#op3-designer-element {
+	.testimonial_iamges {
+
+		.cell {
+			padding: 30px;
+			padding-bottom: 0;
+
+
+			img {
+				display: block;
+				width: 100%;
+				border: 1px solid #CCC;
+				box-shadow: 5px 5px 10px #aaaaaa54
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#op3-designer-element {
+		.testimonial_iamges {
+			max-width: 65rem;
+			margin: 0 auto;
+			padding: 15px;
+			.cell {
+				padding: 15px;
+
+
+				&:nth-child(3), &:nth-child(6) {
+					;
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					border: 1px solid #CCC;
+					box-shadow: 5px 5px 10px #aaaaaa54
+				}
+			}
+		}
+	}
+}

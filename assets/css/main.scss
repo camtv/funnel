@@ -1,0 +1,19 @@
+@import "index";
+@import "custom-head";
+@import "form";
+@import "offer";
+@import "cta_block";
+@import "testimonial_images";
+
+
+
+//::  Gestione minnma per legal
+#op3-designer-element {
+	div.legal {
+		padding: 1.5rem;
+		padding-top: 2.5rem;
+		p {
+			font-size: 1rem;
+		}
+	}
+}
