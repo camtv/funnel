@@ -10,10 +10,13 @@
 //::  Gestione minnma per legal
 #op3-designer-element {
 	div.legal {
+		max-width: 75rem;
+		margin:0 auto;
 		padding: 1.5rem;
 		padding-top: 2.5rem;
 		p {
 			font-size: 1rem;
+			text-align: justify;
 		}
 	}
 }
