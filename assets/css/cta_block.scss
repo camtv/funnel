@@ -199,5 +199,19 @@
 				}
 			}
 		}
+
+		div.cta-block {
+			padding-top: 2rem;
+			padding-bottom: 0rem;
+			h4 {
+				margin-bottom: 0.5rem;
+			}
+			img {
+				margin-bottom: 0.3rem;
+				&.progress-bar {
+					width:  50%;
+				}
+			}
+		}
 	}
 }
