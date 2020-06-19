@@ -9476,8 +9476,34 @@ div.disclaimer {
         line-height: 1.2rem;
         font-style: italic;
     }
+
+    #op3-element-9MdbeX1O {
+        padding-bottom: 0;
+    }
 }
 
+#op3-designer-element {
+    .coccard-container {
+        padding: 3rem 0;
+        max-width:1140px;
+        margin: 0 auto;
+        font-family: Lato, sans-serif;
+
+        p {
+            padding: 1rem;
+            padding-top: 0rem;
+            font-size: 20px;
+            line-height: 1.7em;
+            font-weight: 400;
+        }
+
+        img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -9523,6 +9549,24 @@ div.disclaimer {
         }
     }
 
+    #op3-designer-element {
+        .coccard-container {
+            p {
+                padding: 5rem;
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+                font-size: 25px;
+                line-height: 1.7em;
+                font-weight: 400;
+            }
+
+            img {
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 
@@ -9562,6 +9606,63 @@ div.disclaimer {
 
         #op3-element-vXTGWm1y#op3-element-vXTGWm1y#op3-element-vXTGWm1y {
             margin: 4rem 0;
+        }
+
+        #op3-element-XigtC6PB#op3-element-XigtC6PB#op3-element-XigtC6PB {
+            padding-top: 0;
+            margin-top: 0;
+            margin-bottom: 3.5rem;
+        }
+
+        .coccard-container {
+            padding: 3rem 0;
+
+            max-width:1140px;
+            margin: 0 auto;
+            font-family: Lato, sans-serif;
+
+            p {
+                padding:0;
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+                max-width: 38rem;
+                margin: 0 auto;
+
+                font-size: 25px;
+                line-height: 1.7em;
+                font-weight: 400;
+            }
+
+            img {
+                width: 25%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+
+    #op3-designer-element {
+
+
+        .coccard-container {
+            padding: 3rem 0;
+
+            max-width:1140px;
+            margin: 0 auto;
+            font-family: Lato, sans-serif;
+
+            p {
+                padding:0;
+                font-size: 25px;
+                line-height: 1.7em;
+                font-weight: 400;
+            }
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

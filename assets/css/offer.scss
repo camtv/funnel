@@ -121,9 +121,9 @@
 					top: 0.5rem;
 					left: 1.3rem;
 					z-index: 1000;
-					color: #ffffff30;
+					color: #ffffff38;
 					font-family: "Titillium Web";
-					font-weight: 700;
+					font-weight: 300;
 					font-size: 2rem;
 				}
 
@@ -152,7 +152,7 @@
 					padding-bottom: 2rem;
 					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 					background-color: rgba(58,58,58,0.60);
-					background-image: linear-gradient(155deg, #404040 0%, #656565 65%, #333333 100%);
+					background-image: linear-gradient(155deg, #5a5a5a 0%, #656565 65%, #505050 100%);
 					border: 1px solid #ffffff15;
 
 					img {
@@ -245,6 +245,7 @@
 
 					img {
 						margin-bottom: 1rem;
+						width: 95%;
 					}
 
 					.desc {
@@ -353,6 +354,7 @@
 						img {
 							margin-top: 1rem;
 							margin-bottom: 2rem;
+							width: 88%;
 						}
 						p {
 							font-size: 1.2rem;
