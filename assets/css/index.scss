@@ -9205,6 +9205,7 @@ html[data-op3-layer=designer] .op3-element[data-op3-element-type=video] [data-op
 
     #op3-designer-element #op3-element-ZvczW1kO#op3-element-ZvczW1kO#op3-element-ZvczW1kO [data-op3-contenteditable] > * {
         font-size: 35px;
+        text-shadow: rgba(54, 55, 57, 0.87) 1px 1px 0px;
     }
 
     #op3-designer-element #op3-element-ZvczW1kO#op3-element-ZvczW1kO#op3-element-ZvczW1kO {
@@ -9547,6 +9548,11 @@ div.disclaimer {
 
         #op3-element-qqcs40XN {
             width: 100%;
+
+            > div {
+                max-width: 1140px;
+                margin: 0 auto;
+            }
         }
 
         #op3-element-iEnETiq7 {
@@ -9554,5 +9560,8 @@ div.disclaimer {
         }
 
 
+        #op3-element-vXTGWm1y#op3-element-vXTGWm1y#op3-element-vXTGWm1y {
+            margin: 4rem 0;
+        }
     }
 }
