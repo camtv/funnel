@@ -2,7 +2,7 @@
     <h1><i>OTTIENI LA TUA COPIA GRATIS</i> + €500 DI FORMAZIONE DI ALTO LIVELLO SULL’INTERNET BUSINESS <i>IN REGALO</i> PRIMA CHE LE COPIE VENGANO ESAURITE!</h1>
 
     <div class="pure-g">
-        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-3-5 left-col">
+        <div class="pure-u-1-1 pure-u-md-1-2 left-col">
             <img src="./assets/img/pic-libro.png" alt="" title="pic libro" width="712" height="632">
             <h2>
                 <span style="color: rgb(255, 255, 255); font-weight: normal;">
@@ -11,7 +11,7 @@
             </h2>
             <img src="/assets/img/barra-progresso.gif" alt="" title="barra-progresso" width="1904" height="290">
         </div>
-        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-2-5">
+        <div class="pure-u-1-1 pure-u-md-1-2">
             <div id="acquisto"></div>
             <form id="regForm" action="">
 
@@ -375,29 +375,11 @@
 
                 <div class="tab tab1 hidden">
 
-                    <div class="box-offerta">
-                        <img src="./assets/img/Libro-3D-con-IPad-e-Nuovi-Ricchi_C-e1582909824430.png"><br>
-                        <p>Aggiungi l'audiolibro al tuo ordine e
-                            ricevi in omaggio il capitolo extra <strong>"I
-                                Segreti dei Nuovi Ricchi"</strong> sotto forma di opuscolo
-                            ed il libro Internet Crea Indipendenza
-                            in formato Digitale (Ebook)!</p>
-                        <input type="checkbox" id="offerta"
-                               name="offerta" value="offerta"
-                               onclick="tot()" checked=""><span
-                            class="aggiunta" onclick="$('#offerta').click()">Si, Gabriele! Voglio
-														approfittare
-														dell'offerta!<br>
-													(Audiolibro, Ebook +
-														Capitolo Segreto a soli
-														€29,95)</span>
+                    <div class="riepilogo" style="display:none">
+                        <div class="primariga">Articolo <span
+                                class="dxx">Prezzo</span></div>
 
-                    </div>
-                    <div class="riepilogo">
-                        <p class="primariga">Articolo <span
-                                class="dxx">Prezzo</span></p>
-
-                        <p id="totale" class="hidden fade-in">
+                        <div id="totale" class="hidden fade-in">
 														<span class="sxx"><i
                                                                 class="fas fa-check"
                                                                 aria-hidden="true"></i> Libro
@@ -410,9 +392,9 @@
 															Spedizione </span><span
                                 class="dxx">€7,95</span><br><br>
                             Totale: <span class="dxx">€7,95</span>
-                        </p>
+                        </div>
 
-                        <p id="totalone" class="fade-in">
+                        <div id="totalone" class="fade-in">
 														<span class="sxx"><i
                                                                 class="fas fa-check"
                                                                 aria-hidden="true"></i> Libro
@@ -449,8 +431,126 @@
 															Spedizione </span><span
                                 class="dxx">€7,95</span><br><br>
                             Totale: <span class="dxx">€37,90</span>
-                        </p>
+                        </div>
                     </div>
+
+                    <div class="box-riepilogo">
+                         <div  class="fade-in">
+                             <div class="table">
+                                 <div class="head row">
+                                     <div class="cell">Articolo</div>
+                                     <div class="cell amount">Prezzo</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         Libro "Internet Crea Indipendenza" x1
+                                     </div>
+                                     <div class="cell">GRATIS</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         eBook "Internet Crea Indipendenza"
+                                     </div>
+                                     <div class="cell">GRATIS</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         Opuscolo "I segreti dei nuovi ricchi"
+                                     </div>
+                                     <div class="cell">GRATIS</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         Audiolibro "I segreti dei nuovi ricchi"
+                                     </div>
+                                     <div class="cell">GRATIS</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         Audiolibro "Internet Crea Indipendenza"
+                                     </div>
+                                     <div class="cell">€ 29,95</div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="cell">
+                                         <i class="fas fa-check"  aria-hidden="true"></i>
+                                         Spedizione
+                                     </div>
+                                     <div class="cell">€ 7,95</div>
+                                 </div>
+                             </div>
+                             <div class="table totale">
+                                 <div class="row">
+                                     <div class="cell">Totale:</div>
+                                     <div class="cell">€ 37,90</div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="box-offerta">
+                        <div class="bump-img bump1">
+                            <img src="./assets/img/Libro-3D-con-IPad-e-Nuovi-Ricchi_C-e1582909824430.png">
+                        </div>
+                        <div class="bump-txt">
+                            Aggiungi l'audiolibro al tuo ordine e
+                            ricevi in omaggio il capitolo extra
+                            <strong>"I Segreti dei Nuovi Ricchi"</strong> sotto forma di opuscolo
+                            ed il libro Internet Crea Indipendenza
+                            in formato Digitale (Ebook)!
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <a href="" onclick="">Scopri di più ≫</a>
+                        </div>
+                        <div class="bump-check">
+                            <input type="checkbox" id="offerta"
+                                   name="offerta" value="offerta"
+                                   onclick="tot()" checked="">
+                            <span class="aggiunta" onclick="$('#offerta').click()">
+                                Si, Gabriele! Voglio
+                                    approfittare
+                                    dell'offerta!<br>
+                                (Audiolibro, Ebook +&
+                                    Capitolo Segreto a soli
+                                    €29,95)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="box-offerta bump2">
+                        <div class="bump-img">
+                            <img class="time" src="./assets/img/Bundel-8-Pilastri-e-Tempo_DEF.png">
+                        </div>
+                        <div class="bump-txt">
+                            Si! Voglio approfittare ed impare anche le leggi della gestione vincente delle mie
+                            finanze personali e del mio tempo, capire come “aggiungere ore” alla mia giornata per
+                            realizzare i miei progetti e moltiplicare l’efficacia delle mie risorse economiche
+                            per realizzare finalmente il cambiamento che desidero nella mia vita.
+                            <br>
+                            (Sono consapevole che questi training esclusivi NON sono in vendita altrove, e questa offerta a sconto mi verrà proposta soltanto una volta).
+
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            <a href="" onclick="">Scopri di più ≫</a>
+                        </div>
+                        <div class="bump-check">
+                            <input type="checkbox" id="offerta1"
+                                   name="offerta" value="offerta"
+                                   onclick="tot()" >
+                            <span class="aggiunta" onclick="$('#offerta1').click()">
+                                Si, Gabriele! Voglio
+                                    approfittare
+                                    dell'offerta!<br>
+                                (Audiolibro, Ebook +&
+                                    Capitolo Segreto a soli
+                                    €29,95)
+                            </span>
+                        </div>
+
+                    </div>
+
                 </div>
 
 

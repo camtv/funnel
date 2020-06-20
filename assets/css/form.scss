@@ -31,34 +31,142 @@
 			}
 
 			.tab1 {
-				padding: 0px;
+				padding: 5px;
 
 				.box-offerta {
-					background-color: rgba(0,0,0,0.2);
+					background-color: rgba(0, 0, 0, 0.5);
 					border: 1px solid rgba(255,255,255,0.2);
 					color:white;
 					padding: 0;
-					padding-bottom: 20px;
+					padding-bottom: 30px;
+					padding-top: 90px;
+					margin: 0;
+					margin-top: 110px;
+					margin-bottom: 20px;
 
-					img {
-						padding: 0 15px;
+					&.bump2 {
+						padding-top: 110px;
+						margin-bottom: 3rem;
 					}
 
-					p {
+					.bump-img {
+						top: -90px;
+						left:0;
+						position: absolute;
+
+						img {
+							width: 85%;
+
+							&.time {
+								width: 95%
+							}
+						}
+					}
+
+					.bump-txt {
 						font-size: 15px;
-						padding: 0 10px;
+						padding: 0;
+						margin: 0 20px;
+						text-align:left;
+						position: relative;
+						margin-bottom: 20px;
+
+						img {
+							width: 100px;
+							height: 1px;
+							margin: 0;
+							padding: 0;
+							position: relative;
+						}
+
+						a {
+							position: absolute;
+							right: 0;
+							bottom: -2px;
+							color: #ff8d01;
+							font-size: 90%;
+
+						}
 					}
 
-					.aggiunta {
-						color: #FF8D00;
-						font-size: 18px;
+					.bump-check {
+						margin: 0;
 
+						input[type=checkbox] {
+							margin-right: 5px;
+						}
+
+						.aggiunta {
+							color: #FF8D00;
+							font-size: 17px;
+						}
 					}
 				}
 
-				.riepilogo {
-					padding: 20px 10px;
-					.primariga {
+				.box-riepilogo {
+					padding: 15px;
+					margin: 10px;
+					background-color: #ffffff17;
+
+					.table {
+						margin: 0;
+						padding: 0;
+						width: 100%;
+						display: table;
+						.row {
+							display: table-row;
+
+							&.head {
+								line-height: 35px;
+
+								.cell {
+									border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+									margin-bottom: 5px;
+									font-size: 16px;
+									font-weight: bold;
+									padding: 0 5px;
+								}
+							}
+
+							&:nth-child(2) {
+								.cell {
+									vertical-align: bottom;
+									height: 35px;
+								}
+							}
+
+							.cell {
+								line-height: 22px;
+								i {
+									font-size: 8px;
+									color: #ff7c00;
+									margin-left: -2px;
+									margin-right: 2px;
+								}
+								font-size: 14px;
+								display: table-cell;
+
+								&:last-child {
+									text-align: right;
+								}
+							}
+						}
+
+						&.totale {
+							margin-top: 10px;
+							.row {
+
+								.cell {
+									font-size: 16px;
+									font-weight: bold;
+									height: 30px;
+									//border-top: 1px solid rgba(255, 255, 255, 0.5);
+									vertical-align: middle;
+								}
+							}
+						}
+
+
 						max-width: 100% !important;
 						.dxx {
 							width: 50px;
@@ -91,6 +199,27 @@
 		position: relative;
 	}
 
+}
+
+@media screen and (max-width:375px) {
+	.heading {
+		.op3-headline-wrapper div h2 {
+			margin-top: 10px;
+			line-height: 18px;
+		}
+	}
+
+	#op3-designer-element #op3-element-iEnETiq7 {
+		padding-bottom: 5px;
+	}
+
+	#op3-designer-element #op3-element-p2ZUbPyw {
+		padding-bottom:7px;
+	}
+
+	#op3-designer-element #op3-element-unMBkYzQ {
+		padding-top:0;
+	}
 }
 
 @media (screen and min-width: 768px) {
@@ -130,6 +259,19 @@
 				text-align: center;
 			}
 
+			form {
+				.tab1 {
+					.box-offerta {
+						img {
+							width: 60%;
+						}
+						.bump-txt {
+							margin: 0 1.5rem;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -150,23 +292,3 @@
 	}
 }
 
-@media screen and (max-width:375px) {
-	.heading {
-		.op3-headline-wrapper div h2 {
-			margin-top: 10px;
-			line-height: 18px;
-		}
-	}
-
-	#op3-designer-element #op3-element-iEnETiq7 {
-		padding-bottom: 5px;
-	}
-
-	#op3-designer-element #op3-element-p2ZUbPyw {
-		padding-bottom:7px;
-	}
-
-	#op3-designer-element #op3-element-unMBkYzQ {
-		padding-top:0;
-	}
-}

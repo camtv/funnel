@@ -3,7 +3,11 @@
 		text-align: center;
 		background: 50% no-repeat none;
 		background-attachment: fixed;
-		background-image: radial-gradient(at center center, rgb(137, 137, 137) 0%, rgb(63, 63, 63) 100%);;//radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+		background-image:
+				//radial-gradient(at center center, rgb(137, 137, 137) 0%, rgb(63, 63, 63) 85%),
+				radial-gradient(at center center, #000000bf 0%, #3c3c3ce0 85%),
+				url(/assets/img/gabri_backg.jpg);
+		//radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
 		background-size: cover;
 		margin: 0 auto;
 		padding: 3rem 0.8rem;
@@ -159,8 +163,10 @@
 					padding-bottom: 2rem;
 					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 					background-color: rgba(58,58,58,0.60);
-					background-image: linear-gradient(155deg, #5a5a5a 0%, #656565 65%, #505050 100%);
-					border: 1px solid #ffffff15;
+					//background-image: linear-gradient(155deg, #5a5a5a 0%, #656565 65%, #505050 100%);
+					//border: 1px solid #ffffff15;
+					background-image: linear-gradient(155deg, #0000008f 0%, #a9a9a926 65%, rgba(0, 0, 0, 0.65) 100%);
+					border: 1px solid #ffffff2b;
 
 					img {
 						display: block;
