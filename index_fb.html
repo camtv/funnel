@@ -1715,12 +1715,8 @@
 		jQuery(document).ready(function(){
 
 			try {
-				jQuery("#offerta").removeAttr('checked','checked');
-				var YesBump = getUrlParameter("yesbump");
-				if (YesBump!=null && (YesBump == "1" || YesBump.toLowerCase()=="true")) {
-					jQuery("#offerta").attr('checked','checked')
-				}
-				tot();
+				jQuery("#BUMP1").removeAttr('checked','checked');
+				jQuery("#BUMP2").removeAttr('checked','checked');
 			}
 			catch(ex) {
 

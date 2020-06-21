@@ -123,7 +123,7 @@ color: rgb(255, 110, 0);
 
 
 
-input#offerta::before, input#offerta1::before {
+input#BUMP1::before, input#BUMP2::before {
 	content: url(../../assets/img/arrow.png);
 	margin-left: -35px;
 	line-height: 0.5em;

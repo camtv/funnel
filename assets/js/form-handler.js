@@ -30,6 +30,8 @@ function showTab(n,doNotGoToFormBegin) {
         location.href = "#FORM-BEGIN";
 }
 
+var Bump2MoreContent = null;
+
 function nextPrev(n) {
     // This function will figure out which tab to display
 
@@ -42,6 +44,13 @@ function nextPrev(n) {
     var prevTab = currentTab;
     currentTab = currentTab + n;
 
+    if (Bump2MoreContent == null) {
+        Bump2MoreContent = "";
+        $.get("/form_bump2_more.html").done(function(resp){
+            Bump2MoreContent = resp;
+           $("#FORM-CONTAINER .tab1 .addons").html(resp);
+        })
+    }
 
     // if you have reached the end of the form... :
     if (currentTab >= tabs.length) {
@@ -60,7 +69,7 @@ function nextPrev(n) {
 
         // assegna id prodotto in base a checkbox
         var prodotto;
-        var selezionato = document.getElementById("offerta").checked;
+        var selezionato = document.getElementById("BUMP1").checked;
         if(selezionato) {
             switch(nazfr) {
                 case "ITA":
@@ -214,6 +223,8 @@ function tot() {
     var element2 = document.getElementById("totalone");
     element2.classList.toggle("hidden");
 }
+
+
 
 
 

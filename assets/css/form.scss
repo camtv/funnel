@@ -39,14 +39,14 @@
 					color:white;
 					padding: 0;
 					padding-bottom: 30px;
-					padding-top: 90px;
+					padding-top: 110px;
 					margin: 0;
 					margin-top: 110px;
 					margin-bottom: 20px;
 
 					&.bump2 {
-						padding-top: 110px;
-						margin-bottom: 3rem;
+						padding-top: 135px;
+						margin-bottom: 2rem;
 					}
 
 					.bump-img {
@@ -79,19 +79,77 @@
 							position: relative;
 						}
 
-						a {
+						.show-more {
 							position: absolute;
 							right: 0;
 							bottom: -2px;
 							color: #ff8d01;
 							font-size: 90%;
-
+							text-decoration: underline;
+							cursor: pointer;
 						}
 					}
+					.more {
+						text-align: left;
+						margin: 0 10px;
+						overflow: hidden;
+						margin-bottom: 15px;
+						transition: max-height 2s ease-in-out;
+						max-height: 1000px;
 
+						&.hidden {
+							display: none;
+							max-height: 0px;
+							transition: max-height 1s ease-in-out;
+						}
+
+						> div {
+							padding: 15px;
+							position: relative;
+							background-image: linear-gradient(155deg, #0000008f 0%, #a9a9a926 65%, rgba(0, 0, 0, 0.65) 100%);
+							border: 1px solid #ffffff2b;
+
+							.title {
+								font-size: 15px;
+								margin: 0;
+								padding: 0;
+								margin-bottom: 5px;
+								position: relative;
+
+								.amount {
+									position: absolute;
+									right: 0;
+									top: 0;
+									color: #ff8d01;
+
+									.strike {
+										width: 33px;
+										position: absolute;
+										border-top: 1px solid #fffffff7;
+										right: -5px;
+										transform: rotate(-12deg);
+										top: 11px;
+									}
+								}
+							}
+
+							ul {
+								padding-left: 30px;
+								li {
+									font-size: 15px;
+								}
+							}
+
+							.and-more {
+								font-style: italic;
+							}
+						}
+					}
 					.bump-check {
 						margin: 0;
+						padding: 0 10px;
 
+						cursor: pointer;
 						input[type=checkbox] {
 							margin-right: 5px;
 						}
@@ -99,6 +157,12 @@
 						.aggiunta {
 							color: #FF8D00;
 							font-size: 17px;
+							cursor: pointer;
+						}
+
+						p {
+							margin: 0;
+							margin-top: 10px;
 						}
 					}
 				}
@@ -115,6 +179,9 @@
 						display: table;
 						.row {
 							display: table-row;
+
+							&.bump1 { display: none; }
+							&.bump2 { display: none; }
 
 							&.head {
 								line-height: 35px;
@@ -145,6 +212,11 @@
 								}
 								font-size: 14px;
 								display: table-cell;
+								vertical-align: bottom;
+								margin-bottom: 2px;
+								.bump1 { display: none; }
+								.bump2 { display: none; }
+								.bump1_bump2 { display: none; }
 
 								&:last-child {
 									text-align: right;
@@ -170,6 +242,44 @@
 						max-width: 100% !important;
 						.dxx {
 							width: 50px;
+						}
+					}
+
+					&.with-bump1 {
+						.table {
+							.row.bump1 { display: table-row; }
+						}
+
+						.table.totale {
+							.row {
+								.cell .no-bump { display: none; }
+								.cell .bump1 {	display: inline; }
+								.cell .bump2 { display: none; }
+								.cell .bump1_bump2 { display: none; }
+							}
+						}
+					}
+					&.with-bump2 {
+						.table {
+							.row.bump2 { display: table-row; }
+						}
+						.table.totale {
+							.row {
+								.cell .no-bump { display: none; }
+								.cell .bump1 { display: none; }
+								.cell .bump2 {	display: inline; }
+								.cell .bump1_bump2 { display: none; }
+							}
+						}
+					}
+					&.with-bump1.with-bump2 {
+						.table.totale {
+							.row {
+								.cell .no-bump { display: none; }
+								.cell .bump1 { display: none; }
+								.cell .bump2 { display: none; }
+								.cell .bump1_bump2 { display: inline; }
+							}
 						}
 					}
 				}
@@ -220,6 +330,53 @@
 	#op3-designer-element #op3-element-unMBkYzQ {
 		padding-top:0;
 	}
+
+	#FORM-CONTAINER.form-wrapper .pure-g {
+		form {
+
+			.tab1 {
+				.box-riepilogo {
+					padding: 15px;
+					margin: 0;
+				}
+
+				.box-offerta {
+					padding-top: 90px;
+					&.bump2 {
+						padding-top: 110px;
+					}
+					.more > div {
+
+						padding: 10px;
+
+						.title {
+							font-size: 14px;
+							.amount {
+								font-size: 13px;
+							}
+						}
+
+						ul {
+							padding-left: 20px;
+
+							li {
+								line-height: 20px;
+								padding-bottom: 5px;
+								margin-bottom: 5px;
+							}
+						}
+						.and-more {
+							font-size: 14px;
+						}
+					}
+
+					.bump-check {
+						padding: 0 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (screen and min-width: 768px) {
@@ -262,12 +419,45 @@
 			form {
 				.tab1 {
 					.box-offerta {
-						img {
-							width: 60%;
+						margin: 10px;
+						padding-bottom: 0;
+						margin-top: 110px;
+						padding-top: 40px;
+						&.bump2 {
+							padding-top: 75px;
+							margin-bottom: 3rem;
+						}
+						.bump-img {
+							top: -100px;
+							img {
+								width: 60%;
+
+								&.time {
+									width: 75%;
+									position: relative;
+								}
+							}
 						}
 						.bump-txt {
-							margin: 0 1.5rem;
+							margin: 17px;
 							margin-bottom: 20px;
+						}
+
+						.more {
+							margin-left: 20px;
+							margin-right: 20px;
+						}
+
+						.bump-check {
+							margin: 0 1.5rem;margin-bottom: 20px;
+
+							p {
+								font-size: 15px;
+								font-style: italic;
+								padding: 5px 23px;
+								margin: 13px 0;
+								margin-top: 20px;
+							}
 						}
 					}
 				}
@@ -282,8 +472,48 @@
 			form {
 				.tab1 {
 					.box-offerta {
-						.aggiunta {
-							font-size: 22px;
+						padding-top: 95px;
+
+						.bump-img img.time {
+							width: 85%;
+						}
+
+						&.bump2 {
+							padding-top: 160px;
+							margin-bottom: 3rem;
+						}
+
+						.bump-check {
+							.aggiunta {
+								font-size: 22px;
+							}
+
+							p {
+								font-size: 18px;
+							}
+						}
+
+						.more > div .title.last {
+							margin-top: 20px;
+
+						}
+						.bump-txt {
+							font-size: 16px;
+						}
+					}
+
+					.box-riepilogo .table {
+						.row .cell {
+							font-size: 18px;
+							line-height: 25px;
+						}
+
+						&.totale {
+							.row {
+								.cell {
+									font-size: 18px;
+								}
+							}
 						}
 					}
 				}
