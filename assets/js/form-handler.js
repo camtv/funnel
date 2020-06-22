@@ -1,5 +1,6 @@
 import Sets from "./conf.js"
 import $ from 'jquery';
+import  showdown  from "showdown";
 import SendEvent from './error-events'
 import { parsePhoneNumberFromString } from 'libphonenumber-js'
 import  getCountryISO2  from "country-iso-3-to-2";
@@ -179,6 +180,11 @@ function validateForm() {
         }
     }
 
+    if ($("#PRIVACY"). prop("checked") != true) {
+        valid = false;
+        $("#PRIVACY").parent().addClass("invalid");
+    }
+
     // controllo email
     var ml = document.getElementById("email").value;
     var mlck = document.getElementById("emailck").value;
@@ -277,6 +283,12 @@ function dataMese() {
     document.getElementById("mese").innerHTML = n;
 }
 
+function LoadPrivacy(jqElToAddOutput) {
+    let converter = new showdown.Converter();
+    $.get("https://legal.cam.tv/legal-docs/privacy/2020-06-04/it/privacy.md").done(function(text){
+        jqElToAddOutput.html(converter.makeHtml(text));
+    })
+}
 
 
 window.dataMese=dataMese;
@@ -287,4 +299,5 @@ window.validateForm = validateForm;
 window.fixStepIndicator = fixStepIndicator;
 window.fixStepIndicator = fixStepIndicator;
 window.tot = tot;
+window.LoadPrivacy = LoadPrivacy;
 

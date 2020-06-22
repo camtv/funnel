@@ -25,9 +25,23 @@
 				color: blacK;
 			}
 
-			input.invalid {
+			input.invalid, .box-privacy.invalid {
 				background-color: #ffdddd;
 				border: 2px solid red;
+			}
+
+			.box-privacy {
+				margin-top: 1rem;
+				padding: 0 10px;
+				padding-bottom: 5px;
+				font-size: 13px;
+				text-align: justify;
+
+				&.invalid {
+					background-color: #ffdddd;
+					border: 2px solid red;
+					color: black;
+				}
 			}
 
 			.tab1 {
@@ -283,6 +297,8 @@
 						}
 					}
 				}
+
+
 			}
 		}
 	}

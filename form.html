@@ -1,3 +1,4 @@
+
 <div id="FORM-CONTAINER" class="form-wrapper">
     <h1><i>OTTIENI LA TUA COPIA GRATIS</i> + €500 DI FORMAZIONE DI ALTO LIVELLO SULL’INTERNET BUSINESS <i>IN REGALO</i> PRIMA CHE LE COPIE VENGANO ESAURITE!</h1>
 
@@ -371,6 +372,13 @@
                         <option value="ZWE">Zimbabwe</option>
                     </select>
 
+                    <div class="box-privacy">
+                        <input type="checkbox" id="PRIVACY" onclick="$(this).parent().removeClass('invalid')">
+                        <span onclick="$('#PRIVACY').click()">
+                            Ho letto e preso visione della Normativa Sulla Privacy e acconsento al trattamento dei miei dati personali in conformità al regolamento UE n. 2016/679. (<a href="#modal-one">leggi la normativa sulla Privacy</a>).
+                        </span>
+                    </div>
+
                 </div>
 
                 <div class="tab tab1 hidden">
@@ -496,7 +504,25 @@
             </form>
         </div>
     </div>
+</div>
 
+<div class="modal" id="modal-one" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h2>Regolamento Privacy</h2>
+            <a href="#PRIVACY" class="btn-close" aria-hidden="true">×</a>
+        </div>
+        <div class="modal-body">
 
+        </div>
+        <div class="modal-footer">
+            <a href="#PRIVACY" class="btn">Chiudi</a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            window.LoadPrivacy($('#modal-one .modal-body'))
+        })
+    </script>
 
 </div>
