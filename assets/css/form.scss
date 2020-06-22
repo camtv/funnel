@@ -30,6 +30,11 @@
 				border: 2px solid red;
 			}
 
+			.testata-form .tabs h5.subtitolo {
+				padding: 0;
+				font-size: 67%;
+			}
+
 			.box-privacy {
 				margin-top: 1rem;
 				padding: 0 10px;
@@ -399,6 +404,21 @@
 	}
 }
 
+@media (screen and min-width: 375px) {
+	#FORM-CONTAINER.form-wrapper {
+
+		.pure-g {
+			form {
+				.testata-form .tabs h5.subtitolo {
+					padding: 0;
+					font-size: 75%;
+				}
+			}
+		}
+	}
+}
+
+
 @media (screen and min-width: 768px) {
 	#FORM-CONTAINER.form-wrapper {
 
@@ -408,6 +428,10 @@
 			form {
 				.tab1 {
 					padding: 5px;
+				}
+				.testata-form .tabs h5.subtitolo {
+					padding: 0;
+					font-size: 95%;
 				}
 			}
 		}
