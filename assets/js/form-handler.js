@@ -46,7 +46,7 @@ function nextPrev(n) {
 
     if (Bump2MoreContent == null) {
         Bump2MoreContent = "";
-        $.get("/form_bump2_more.html").done(function(resp){
+        $.get("./form_bump2_more.html").done(function(resp){
             Bump2MoreContent = resp;
            $("#FORM-CONTAINER .tab1 .addons").html(resp);
         })
