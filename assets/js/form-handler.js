@@ -22,7 +22,7 @@ function showTab(n,doNotGoToFormBegin) {
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "SPEDISCI IL MIO LIBRO ADESSO!<br><span class='txt-btn'>100% pagamento sicuro</span>";
     } else {
-        document.getElementById("nextBtn").innerHTML = "<i class='fas fa-shipping-fast'></i> Inviamelo GRATIS!<br><span class='txt-btn'>Partecipa all'Offerta Speciale.</span>";
+        document.getElementById("nextBtn").innerHTML = "<i class='fas fa-shipping-fast'></i> Vai al prossimo step.<br><span class='txt-btn'>Partecipa all'Offerta Speciale.</span>";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
