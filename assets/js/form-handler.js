@@ -68,25 +68,18 @@ function nextPrev(n) {
         var nazfr = document.getElementById("naz").value;
 
         // assegna id prodotto in base a checkbox
-        var prodotto;
-        var selezionato = document.getElementById("BUMP1").checked;
-        if(selezionato) {
-            switch(nazfr) {
-                case "ITA":
-                    prodotto = "FUNNEL_BUMP"
-                    break;
-                default:
-                    prodotto = "FUNNEL_BUMP_NO_ITA"
-            }
-        } else {
-            switch(nazfr) {
-                case "ITA":
-                    prodotto = "FUNNEL_BOOK"
-                    break;
-                default:
-                    prodotto = "FUNNEL_BOOK_NO_ITA"
-            }
-        }
+        var prodotto = "FUNNEL";
+        if (document.getElementById("BUMP1").checked == true)
+            prodotto += "_BUMP";
+
+        if (document.getElementById("BUMP2").checked == true)
+            prodotto += "_BUMP2";
+
+        if (prodotto == "FUNNEL")
+            prodotto += "_BOOK";
+
+        if (nazfr != "ITA")
+            prodotto += "_NO_ITA";
 
         var PaymentUserData = {
             "FirstName": nomefr, // obbligatorio
