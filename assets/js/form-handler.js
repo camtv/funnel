@@ -60,7 +60,9 @@ function nextPrev(n) {
         // *** IMPORTANTE: rimosso submit del form per evitare ricaricamento della pagina ***
         // document.getElementById("regForm").submit();
 
-        var nomefr = document.getElementById("name").value;
+        var nomecompletofr = document.getElementById("name").value.trim().split(" ");
+        var nomefr = nomecompletofr[0];
+        var cognomefr = nomecompletofr[1] || nomecompletofr[0];
         var emailfr = document.getElementById("email").value;
         var addressfr = document.getElementById("address").value;
         var cittafr = document.getElementById("citta").value;
@@ -84,7 +86,7 @@ function nextPrev(n) {
 
         var PaymentUserData = {
             "FirstName": nomefr, // obbligatorio
-            "LastName": " ", // obbligatorio
+            "LastName": cognomefr, // obbligatorio
             "EMail": emailfr, // obbligatorio
             "CountryISOCode": nazfr, // obbligatorio es: "ITA"
             "Address": addressfr,
