@@ -332,6 +332,20 @@
 
 }
 
+h1.on_fb2 {
+	display: none;
+}
+
+.is_fb2 {
+	.on_all {
+		display: none;
+	}
+
+	h1.on_fb2 {
+		display: block;
+	}
+}
+
 @media screen and (max-width:375px) {
 	.heading {
 		.op3-headline-wrapper div h2 {
@@ -448,6 +462,11 @@
 
 		h1 {
 			font-size: 60px;
+
+			&.on_fb2 {
+				font-size: 70px;
+			}
+
 			margin-bottom: 50px;
 			text-shadow: rgba(0, 0, 0, 0.3) 0px 6px 0px;
 		}
@@ -512,9 +531,19 @@
 
 @media (screen and min-width: 1280px) {
 	#FORM-CONTAINER.form-wrapper {
+
+		h1 {
+			&.on_fb2 {
+				font-size: 80px;
+			}
+		}
+
 		.pure-g {
+
 			form {
+
 				.tab1 {
+
 					.box-offerta {
 						padding-top: 95px;
 
